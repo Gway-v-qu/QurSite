@@ -1,0 +1,16 @@
+نسخة الموقع بعد تجهيز Offline/PWA
+
+تم إصلاح:
+- مسارات ../ الخاطئة للـmanifest وsw.js وfonts.css وFont Awesome.
+- الروابط المطلقة /index.html و /Logo.png وباقي صفحات الموقع لتعمل تحت /QurSite/.
+- إزالة الاعتماد على Google Fonts وTransparentTextures وUnsplash من الصفحات.
+- جعل fonts.css محليًا.
+- Service Worker جديد يقوم بتخزين جميع ملفات الموقع المحلية مسبقًا.
+- manifest scope/start_url متوافقان مع GitHub Pages.
+
+بعد استبدال الملفات في مشروعك:
+git add .
+git commit -m "Make website fully offline"
+git push
+
+ملاحظة: ملفات الصوت الموجودة على خوادم mp3quran.net ليست موجودة داخل المشروع، لذلك تشغيل الصوت نفسه بدون إنترنت لا يمكن ضمانه إلا إذا تم توفير ملفات الصوت محليًا.

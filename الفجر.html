@@ -24,7 +24,7 @@
       property="og:description"
       content="قراءة سورة الفجر - طريق الجنة - طريق الجنة: المنصة الذكية لتعليم الدين الإسلامي."
     />
-    <meta property="og:image" content="/Logo.png" />
+    <meta property="og:image" content="./Logo.png" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -33,19 +33,14 @@
       name="twitter:description"
       content="قراءة سورة الفجر - طريق الجنة - طريق الجنة: المنصة الذكية لتعليم الدين الإسلامي."
     />
-    <meta name="twitter:image" content="/Logo.png" />
+    <meta name="twitter:image" content="./Logo.png" />
 
-    <link rel="shortcut icon" href="/Logo.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="./Logo.png" type="image/x-icon" />
     <link
       rel="stylesheet"
-      href="../Font Awesome/fontawesome-free-7.2.0-web/css/all.min.css"
+      href="./Font Awesome/fontawesome-free-7.2.0-web/css/all.min.css"
     />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <style>
+<style>
         :root {
             --primary-color: #1a5f7a;
             --secondary-color: #159895;
@@ -742,8 +737,9 @@
       }
     </style>
 
-    <link rel="manifest" href="../manifest.json" />
-  </head>
+    <link rel="manifest" href="./manifest.json" />
+      <link rel="stylesheet" href="./fonts.css">
+</head>
 
   <body>
     <div class="app-wrapper">
@@ -755,25 +751,25 @@
         <nav class="sidebar-menu">
           <ul>
             <li>
-              <a href="/index.html"><i class="fas fa-home"></i>الرئيسية</a>
+              <a href="./index.html"><i class="fas fa-home"></i>الرئيسية</a>
             </li>
             <li>
-              <a href="/index.html#learn"
+              <a href="./index.html#learn"
                 ><i class="fas fa-graduation-cap"></i> تعلم الدين</a
               >
             </li>
             <li>
-              <a href="/الاذكار.html"
+              <a href="./الاذكار.html"
                 ><i class="fas fa-pray"></i> أذكار وأدعية</a
               >
             </li>
             <li class="active">
-              <a href="/قراءة القرآن.html"
+              <a href="./قراءة القرآن.html"
                 ><i class="fas fa-book-quran"></i> القرآن الكريم</a
               >
             </li>
             <li>
-              <a href="/اختبارات.html"
+              <a href="./اختبارات.html"
                 ><i class="fas fa-question-circle"></i> اختبارات تفاعلية</a
               >
             </li>
@@ -987,7 +983,7 @@
               <a href="الغاشية.html" class="btn"
                 ><i class="fas fa-arrow-right"></i> السابق</a
               >
-              <a href="/قراءة القرآن.html" class="btn btn-gold"
+              <a href="./قراءة القرآن.html" class="btn btn-gold"
                 ><i class="fas fa-list-ul"></i> قائمة السور</a
               >
               <a href="البلد.html" class="btn"
@@ -1012,27 +1008,27 @@
                 <h3>روابط</h3>
                 <ul>
                   <li>
-                    <a href="/index.html"
+                    <a href="./index.html"
                       ><i class="fas fa-home"></i>الرئيسية</a
                     >
                   </li>
                   <li>
-                    <a href="/index.html#learn"
+                    <a href="./index.html#learn"
                       ><i class="fas fa-graduation-cap"></i> تعلم الدين</a
                     >
                   </li>
                   <li>
-                    <a href="/الاذكار.html"
+                    <a href="./الاذكار.html"
                       ><i class="fas fa-pray"></i> أذكار وأدعية</a
                     >
                   </li>
                   <li>
-                    <a href="/قراءة القرآن.html"
+                    <a href="./قراءة القرآن.html"
                       ><i class="fas fa-book-quran"></i> القرآن الكريم</a
                     >
                   </li>
                   <li>
-                    <a href="/اختبارات.html"
+                    <a href="./اختبارات.html"
                       ><i class="fas fa-question-circle"></i> اختبارات
                       تفاعلية</a
                     >
@@ -1158,7 +1154,7 @@
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
           navigator.serviceWorker
-            .register("../sw.js", { scope: "../" })
+            .register("./sw.js", { scope: "../" })
             .then((registration) => {
               console.log(
                 "ServiceWorker registration successful with scope: ",

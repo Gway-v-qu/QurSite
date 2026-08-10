@@ -19,20 +19,19 @@
     <meta property="og:title" content="طريق الجنة - المنصة الذكية لتعليم الدين الإسلامي">
     <meta property="og:description"
         content="طريق الجنة - المنصة الذكية لتعليم الدين الإسلامي - طريق الجنة: المنصة الذكية لتعليم الدين الإسلامي.">
-    <meta property="og:image" content="/Logo.png">
+    <meta property="og:image" content="./Logo.png">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="طريق الجنة - المنصة الذكية لتعليم الدين الإسلامي">
     <meta name="twitter:description"
         content="طريق الجنة - المنصة الذكية لتعليم الدين الإسلامي - طريق الجنة: المنصة الذكية لتعليم الدين الإسلامي.">
-    <meta name="twitter:image" content="/Logo.png">
+    <meta name="twitter:image" content="./Logo.png">
 
     <link rel="shortcut icon" href="Logo.png" type="image/x-icon">
     <link rel="stylesheet" href="Font Awesome/fontawesome-free-7.2.0-web/css/all.min.css">
     <link rel="stylesheet" href="Font Awesome/fontawesome-free-7.2.0-web/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
+<style>
         :root {
             --primary-color: #1a5f7a;
             --secondary-color: #159895;
@@ -57,7 +56,7 @@
             color: var(--text-color);
             line-height: 1.8;
             overflow-x: hidden;
-            background-image: url('https://www.transparenttextures.com/patterns/arabesque.png');
+            background-image: none;
             background-attachment: fixed;
         }
 
@@ -641,7 +640,7 @@
 
         /* قسم القرآن الكريم */
         .quran-section {
-            background: linear-gradient(rgba(26, 95, 122, 0.9), rgba(21, 152, 149, 0.9)), url('https://www.transparenttextures.com/patterns/arabesque.png');
+            background: linear-gradient(rgba(26, 95, 122, 0.9), rgba(21, 152, 149, 0.9)), none;
             background-size: cover;
             background-position: center;
             color: white;
@@ -799,7 +798,7 @@
             right: 0;
             width: 100%;
             height: 100%;
-            background-image: url('https://www.transparenttextures.com/patterns/arabesque.png');
+            background-image: none;
             background-size: cover;
             opacity: 0.2;
         }
@@ -1431,6 +1430,7 @@
     </style>
 
     <link rel="manifest" href="./manifest.json">
+    <link rel="stylesheet" href="./fonts.css">
 </head>
 
 <body>
@@ -1706,11 +1706,11 @@
 
             if (isLoggedIn && currentUser) {
                 // تحديث الواجهة بعد تسجيل الدخول
-                authBtn.innerHTML = `<img src="${currentUser.image || 'https://via.placeholder.com/150'}" alt="صورة المستخدم" style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover;">`;
+                authBtn.innerHTML = `<img src="${currentUser.image || './Logo.png'}" alt="صورة المستخدم" style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover;">`;
                 sidebarAuthBtn.innerHTML = '<i class="fas fa-sign-out-alt"></i> تسجيل الخروج';
                 userProfile.style.display = 'flex';
                 userProfile.querySelector('.user-name').textContent = currentUser.name;
-                userProfile.querySelector('img').src = currentUser.image || 'https://via.placeholder.com/150';
+                userProfile.querySelector('img').src = currentUser.image || './Logo.png';
 
                 // إظهار الإشعارات (مع أرقام صفرية)
                 badges.forEach(badge => {
@@ -1830,7 +1830,7 @@
             currentUser = {
                 name: 'محمد أحمد',
                 email: email,
-                image: 'https://via.placeholder.com/150'
+                image: './Logo.png'
             };
 
             updateAuthUI();
@@ -1871,7 +1871,7 @@
             currentUser = {
                 name: name,
                 email: email,
-                image: 'https://via.placeholder.com/150'
+                image: './Logo.png'
             };
 
             updateAuthUI();
@@ -1882,7 +1882,7 @@
         // تسجيل الدخول عبر وسائل التواصل الاجتماعي
         function showSocialModal(provider, userData) {
             socialModalTitle.textContent = `تسجيل الدخول ب${provider}`;
-            socialUserImage.src = userData.image || 'https://via.placeholder.com/150';
+            socialUserImage.src = userData.image || './Logo.png';
             socialUserEmail.textContent = userData.email;
             showModal(socialModal);
         }
@@ -1892,7 +1892,7 @@
             const googleUser = {
                 name: 'محمد أحمد',
                 email: 'mohamed@gmail.com',
-                image: 'https://via.placeholder.com/150'
+                image: './Logo.png'
             };
             showSocialModal('جوجل', googleUser);
         });
@@ -1902,7 +1902,7 @@
             const facebookUser = {
                 name: 'أحمد محمد',
                 email: 'ahmed@facebook.com',
-                image: 'https://via.placeholder.com/150'
+                image: './Logo.png'
             };
             showSocialModal('فيسبوك', facebookUser);
         });
@@ -1912,7 +1912,7 @@
             const googleUser = {
                 name: 'محمد أحمد',
                 email: 'mohamed@gmail.com',
-                image: 'https://via.placeholder.com/150'
+                image: './Logo.png'
             };
             showSocialModal('جوجل', googleUser);
         });
@@ -1922,7 +1922,7 @@
             const facebookUser = {
                 name: 'أحمد محمد',
                 email: 'ahmed@facebook.com',
-                image: 'https://via.placeholder.com/150'
+                image: './Logo.png'
             };
             showSocialModal('فيسبوك', facebookUser);
         });

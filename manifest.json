@@ -3,6 +3,7 @@
   "short_name": "طريق الجنة",
   "description": "المنصة الذكية لتعليم الدين الإسلامي، القرآن الكريم، الأذكار، والاختبارات الدينية.",
   "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#1a5f7a",
   "theme_color": "#1a5f7a",

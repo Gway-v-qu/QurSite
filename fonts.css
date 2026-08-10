@@ -1,7 +1,28 @@
+/* Local-only fonts for offline/PWA use. */
 @font-face {
     font-family: 'AmiriQuran-Regular';
-    src: url('AmiriQuran-Regular.ttf');
+    src: url('./AmiriQuran-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
 }
-:root{
-    --quran-font: 'AmiriQuran-Regular';
+
+/* Keep the site's existing Tajawal name without downloading a web font. */
+@font-face {
+    font-family: 'Tajawal';
+    src: local('Tahoma'), local('Arial');
+    font-weight: 400 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Amiri';
+    src: url('./AmiriQuran-Regular.ttf') format('truetype');
+    font-weight: 400 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --quran-font: 'AmiriQuran-Regular', 'Amiri', serif;
 }
