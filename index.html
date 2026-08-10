@@ -1,0 +1,2001 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طريق الجنة - المنصة الذكية لتعليم الدين الإسلامي</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="طريق الجنة - المنصة الذكية لتعليم الدين الإسلامي - طريق الجنة: المنصة الذكية لتعليم الدين الإسلامي، القرآن الكريم، الأذكار، والاختبارات الدينية.">
+    <meta name="keywords"
+        content="طريق الجنة, إسلام, قرآن كريم, أذكار, أدعية, تعليم الدين, طريق الجنة - المنصة الذكية لتعليم الدين الإسلامي">
+    <meta name="author" content="طريق الجنة">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#1a5f7a">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="طريق الجنة - المنصة الذكية لتعليم الدين الإسلامي">
+    <meta property="og:description"
+        content="طريق الجنة - المنصة الذكية لتعليم الدين الإسلامي - طريق الجنة: المنصة الذكية لتعليم الدين الإسلامي.">
+    <meta property="og:image" content="/Logo.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="طريق الجنة - المنصة الذكية لتعليم الدين الإسلامي">
+    <meta name="twitter:description"
+        content="طريق الجنة - المنصة الذكية لتعليم الدين الإسلامي - طريق الجنة: المنصة الذكية لتعليم الدين الإسلامي.">
+    <meta name="twitter:image" content="/Logo.png">
+
+    <link rel="shortcut icon" href="Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="Font Awesome/fontawesome-free-7.2.0-web/css/all.min.css">
+    <link rel="stylesheet" href="Font Awesome/fontawesome-free-7.2.0-web/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #57c5b6;
+            --light-color: #f9f9f9;
+            --dark-color: #002b5b;
+            --text-color: #333;
+            --gold-color: #b8860b;
+            --sidebar-width: 280px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', sans-serif;
+            text-decoration: none;
+        }
+
+        body {
+            background-color: var(--light-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            overflow-x: hidden;
+            background-image: url('https://www.transparenttextures.com/patterns/arabesque.png');
+            background-attachment: fixed;
+        }
+
+        .container {
+            width: 95%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* التصميم العام */
+        .app-wrapper {
+            display: flex;
+            min-height: 100vh;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        /* الشريط الجانبي - دائماً برجر */
+        .sidebar {
+            position: fixed;
+            right: -280px;
+            top: 0;
+            width: var(--sidebar-width);
+            height: 100vh;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            overflow-y: auto;
+            transition: all 0.3s ease;
+            border-left: 3px solid var(--accent-color);
+        }
+
+        .sidebar.active {
+            right: 0;
+        }
+
+        .sidebar-header {
+            padding: 1.5rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            background-color: rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sidebar-header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .sidebar-header .logo-img {
+            width: 40px;
+            height: 40px;
+            margin-left: 10px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .sidebar-menu {
+            padding: 1rem 0;
+        }
+
+        .sidebar-menu ul {
+            list-style: none;
+        }
+
+        .sidebar-menu ul li a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 1.5rem;
+            transition: all 0.3s;
+            position: relative;
+            font-size: 1rem;
+        }
+
+        .sidebar-menu ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--accent-color);
+        }
+
+        .sidebar-menu ul li a i {
+            margin-left: 10px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .sidebar-menu ul li.active a {
+            background-color: rgba(255, 255, 255, 0.15);
+            color: var(--accent-color);
+            border-right: 3px solid var(--accent-color);
+        }
+
+        .sidebar-footer {
+            padding: 1rem;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: auto;
+        }
+
+        .sidebar-footer .user-profile {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .sidebar-footer .user-profile img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--accent-color);
+            margin-left: 10px;
+        }
+
+        .sidebar-footer .user-profile .user-name {
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .sidebar-footer .auth-btn {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .sidebar-footer .auth-btn:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* المحتوى الرئيسي */
+        .main-content {
+            flex: 1;
+            padding: 1rem;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        /* شريط أعلى الصفحة */
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem 1rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            margin-bottom: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .top-bar .menu-toggle {
+            background: none;
+            border: none;
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+
+        .top-bar .menu-toggle:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        .top-bar .logo-mobile {
+            font-weight: bold;
+            color: var(--primary-color);
+            display: block;
+        }
+
+        .top-bar .search-container {
+            position: relative;
+            flex: 1;
+            max-width: 500px;
+            margin: 0 1rem;
+            display: none;
+        }
+
+        .top-bar .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: #f5f5f5;
+            border-radius: 20px;
+            padding: 0.4rem 1rem;
+            transition: all 0.3s;
+        }
+
+        .top-bar .search-bar.active {
+            border-radius: 20px 20px 0 0;
+        }
+
+        .top-bar .search-bar input {
+            border: none;
+            background: none;
+            outline: none;
+            width: 100%;
+            padding: 0.3rem;
+            font-size: 0.9rem;
+        }
+
+        .top-bar .search-bar i {
+            color: #777;
+            margin-left: 10px;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        .search-results {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: white;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            max-height: 400px;
+            overflow-y: auto;
+            display: none;
+            z-index: 1000;
+        }
+
+        .search-results.active {
+            display: block;
+        }
+
+        .search-results .result-category {
+            padding: 0.5rem 1rem;
+            background-color: #f5f5f5;
+            font-weight: bold;
+            color: var(--primary-color);
+            font-size: 0.9rem;
+        }
+
+        .search-results .result-item {
+            padding: 0.8rem 1rem;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .search-results .result-item:hover {
+            background-color: #f9f9f9;
+        }
+
+        .search-results .result-item i {
+            margin-left: 10px;
+            color: var(--accent-color);
+        }
+
+        .search-results .result-item .result-text {
+            flex: 1;
+        }
+
+        .search-results .result-item .result-type {
+            font-size: 0.8rem;
+            color: #777;
+        }
+
+        .top-bar .user-actions {
+            display: flex;
+            align-items: center;
+        }
+
+        .top-bar .user-actions .action-btn {
+            position: relative;
+            margin-left: 0.5rem;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+
+        .top-bar .user-actions .action-btn:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        .top-bar .user-actions .badge {
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            background-color: var(--accent-color);
+            color: white;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            font-size: 0.7rem;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* أقسام الموقع */
+        .section {
+            padding: 2rem 0;
+        }
+
+        .section-title {
+            position: relative;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            text-align: center;
+            padding-bottom: 1rem;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(to right, var(--accent-color), var(--secondary-color));
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+
+        .section-title.with-icon i {
+            margin-left: 10px;
+            color: var(--accent-color);
+        }
+
+        /* بطاقات الموقع */
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            position: relative;
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            padding: 1.2rem;
+            border-bottom: 1px solid #eee;
+            position: relative;
+        }
+
+        .card-header h3 {
+            color: var(--primary-color);
+            margin-bottom: 0;
+            font-size: 1.2rem;
+        }
+
+        .card-body {
+            padding: 1.2rem;
+        }
+
+        .card-footer {
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border-top: 1px solid #eee;
+        }
+
+        /* أزرار الموقع */
+        .btn {
+            display: inline-block;
+            background: linear-gradient(to right, var(--accent-color), var(--secondary-color));
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            font-size: 0.9rem;
+            box-shadow: 0 3px 8px rgba(87, 197, 182, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(87, 197, 182, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            box-shadow: none;
+        }
+
+        .btn-outline:hover {
+            background: linear-gradient(to right, var(--accent-color), var(--secondary-color));
+            color: white;
+        }
+
+        .btn-block {
+            display: block;
+            width: 100%;
+        }
+
+        /* قسم البطل */
+        .hero-section {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            background: linear-gradient(rgba(26, 95, 122, 0.85), rgba(21, 152, 149, 0.85)), url('sunset-desert-with-muslim-mosque-foreground.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-content h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        /* قسم الميزات */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to right, var(--accent-color), var(--secondary-color));
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 0.8rem;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        .feature-card p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        /* قسم الأذكار */
+        .azkar-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.2rem;
+        }
+
+        .zekr-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.2rem;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            border-right: 3px solid var(--accent-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .zekr-card:before {
+            content: '\f1ea';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            bottom: -15px;
+            left: -15px;
+            font-size: 4rem;
+            color: rgba(26, 95, 122, 0.05);
+            z-index: 0;
+        }
+
+        .zekr-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+            font-size: 1.1rem;
+        }
+
+        .zekr-card h3 i {
+            margin-left: 8px;
+            color: var(--accent-color);
+            font-size: 0.9rem;
+        }
+
+        .zekr-text {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            line-height: 1.7;
+            position: relative;
+            z-index: 1;
+        }
+
+        .zekr-count {
+            display: inline-block;
+            background-color: var(--light-color);
+            color: var(--secondary-color);
+            padding: 0.2rem 0.6rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* قسم القرآن الكريم */
+        .quran-section {
+            background: linear-gradient(rgba(26, 95, 122, 0.9), rgba(21, 152, 149, 0.9)), url('https://www.transparenttextures.com/patterns/arabesque.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 2.5rem 13px;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .quran-section .section-title {
+            color: white;
+        }
+
+        .quran-section .section-title:after {
+            background: linear-gradient(to right, var(--light-color), var(--accent-color));
+        }
+
+        .quran-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.2rem;
+        }
+
+        .quran-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quran-card:hover {
+            transform: translateY(-5px);
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .quran-card i {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            color: var(--light-color);
+        }
+
+        .quran-card h3 {
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        .quran-card p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* قسم تعلم الإسلام */
+        .learn-section {
+            background-color: #f9f9f9;
+            padding: 2rem 0;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .learn-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.2rem;
+        }
+
+        .learn-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .learn-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .learn-image {
+            height: 180px;
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .learn-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .learn-content {
+            padding: 1.2rem;
+        }
+
+        .learn-content h3 {
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+
+        .learn-content p {
+            color: var(--text-color);
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+        }
+
+        /* قسم الاختبارات */
+        .quizzes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.2rem;
+            margin: 25px;
+        }
+
+        .quiz-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .quiz-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .quiz-image {
+            height: 150px;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quiz-image:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://www.transparenttextures.com/patterns/arabesque.png');
+            background-size: cover;
+            opacity: 0.2;
+        }
+
+        .quiz-content {
+            padding: 1.2rem;
+        }
+
+        .quiz-content h3 {
+            margin-bottom: 0.8rem;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+
+        .quiz-content p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .quiz-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            color: var(--text-color);
+        }
+
+        /* قسم المتجر */
+        .store-section {
+            background-color: #f9f9f9;
+            padding: 2rem 0;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.2rem;
+        }
+
+        .book-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .book-image {
+            height: 200px;
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .book-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .book-content {
+            padding: 1.2rem;
+        }
+
+        .book-content h3 {
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+
+        .book-author {
+            color: var(--text-color);
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .book-price {
+            font-weight: bold;
+            color: var(--accent-color);
+            font-size: 1rem;
+            margin-bottom: 0.8rem;
+        }
+
+        /* قسم الإحصائيات */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .stat-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.2rem;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        .stat-card i {
+            font-size: 2rem;
+            margin-bottom: 0.8rem;
+            color: var(--accent-color);
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 0.3rem;
+        }
+
+        .stat-title {
+            color: var(--text-color);
+            font-size: 0.8rem;
+        }
+
+        /* قسم التعليقات */
+        .comments-section {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .comment-form {
+            margin-bottom: 2rem;
+        }
+
+        .comment-form textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            resize: vertical;
+            min-height: 100px;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .comment-form button {
+            background: linear-gradient(to right, var(--accent-color), var(--secondary-color));
+            color: white;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .comment-list {
+            margin-top: 2rem;
+        }
+
+        .comment-item {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 1rem;
+        }
+
+        .comment-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .comment-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-left: 10px;
+        }
+
+        .comment-author {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .comment-date {
+            font-size: 0.8rem;
+            color: #777;
+            margin-right: auto;
+        }
+
+        .comment-content {
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .comment-actions {
+            margin-top: 0.5rem;
+            font-size: 0.8rem;
+        }
+
+        .comment-actions a {
+            color: #777;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        .comment-actions a:hover {
+            color: var(--accent-color);
+        }
+
+        .comment-bad {
+            background-color: #fff5f5;
+            border-left: 3px solid #ff6b6b;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: #ff6b6b;
+        }
+
+        /* التذييل */
+        footer {
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 0 1rem;
+            margin-top: 2rem;
+            position: relative;
+        }
+
+        footer:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 10px;
+            background: linear-gradient(to right, var(--accent-color), var(--secondary-color));
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-column h3 {
+            color: white;
+            margin-bottom: 1.2rem;
+            font-size: 1.2rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 40px;
+            height: 2px;
+            background: linear-gradient(to right, var(--accent-color), white);
+        }
+
+        .footer-column p {
+            margin-bottom: 1rem;
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 0.6rem;
+        }
+
+        .footer-column ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: all 0.3s;
+            display: block;
+            padding: 0.2rem 0;
+            font-size: 0.9rem;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--accent-color);
+            transform: translateX(-3px);
+        }
+
+        .footer-column ul li a i {
+            margin-left: 6px;
+            color: var(--accent-color);
+            font-size: 0.8rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s;
+            font-size: 1rem;
+        }
+
+        .social-links a:hover {
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+            transform: translateY(-3px);
+        }
+
+        .newsletter-form {
+            display: flex;
+            margin-top: 1rem;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 0.6rem;
+            border: none;
+            border-radius: 20px 0 0 20px;
+            outline: none;
+            font-size: 0.9rem;
+        }
+
+        .newsletter-form button {
+            background: linear-gradient(to right, var(--accent-color), var(--secondary-color));
+            color: white;
+            border: none;
+            padding: 0 1.2rem;
+            border-radius: 0 20px 20px 0;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .newsletter-form button:hover {
+            opacity: 0.9;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.7);
+            bottom: 0;
+            top: 20px;
+        }
+
+        /* تأثيرات إضافية */
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-5px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .pulse {
+            animation: pulse 3s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.02);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* أنماط النوافذ المنبثقة */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            backdrop-filter: blur(3px);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background-color: white;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 400px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            transform: translateY(20px);
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: translateY(0);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.2rem;
+        }
+
+        .modal-header h2 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin: 0;
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #777;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.7rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus {
+            border-color: var(--accent-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(87, 197, 182, 0.2);
+        }
+
+        .form-separator {
+            display: flex;
+            align-items: center;
+            margin: 1rem 0;
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        .form-separator:before,
+        .form-separator:after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .form-separator:before {
+            margin-left: 10px;
+        }
+
+        .form-separator:after {
+            margin-right: 10px;
+        }
+
+        .btn-social {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 0.7rem;
+            border-radius: 5px;
+            margin-bottom: 0.8rem;
+            font-weight: 500;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .btn-social i {
+            margin-left: 8px;
+            font-size: 1rem;
+        }
+
+        .btn-social.google {
+            background-color: #f1f1f1;
+            color: #333;
+        }
+
+        .btn-social.google:hover {
+            background-color: #e0e0e0;
+        }
+
+        .btn-social.facebook {
+            background-color: #3b5998;
+            color: white;
+        }
+
+        .btn-social.facebook:hover {
+            background-color: #344e86;
+        }
+
+        .modal-footer {
+            text-align: center;
+            margin-top: 1.2rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid #eee;
+            color: var(--text-color);
+            font-size: 0.9rem;
+        }
+
+        .modal-footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* تصميم متجاوب */
+        @media (max-width: 768px) {
+            .top-bar .logo-mobile {
+                display: block;
+
+            }
+
+            .top-bar .search-container {
+                margin: 0 0.5rem;
+                display: none;
+            }
+
+            .hero-section {
+                height: 350px;
+            }
+
+            .hero-content h1 {
+                font-size: 1.7rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+
+            .hero-buttons .btn {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-section {
+                height: 300px;
+            }
+
+            .hero-content h1 {
+                font-size: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 1.3rem;
+            }
+
+            .top-bar .search-container {
+                display: none;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <link rel="manifest" href="./manifest.json">
+</head>
+
+<body>
+    <div class="app-wrapper">
+        <!-- الشريط الجانبي - دائماً مخفي ويظهر كنافذة -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <span>طريق الجنة</span>
+                </div>
+            </div>
+            <nav class="sidebar-menu">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i>الرئيسية</a></li>
+                    <li><a href="index.html#learn"><i class="fas fa-graduation-cap"></i> تعلم الدين</a></li>
+                    <li><a href="الاذكار.html"><i class="fas fa-pray"></i> أذكار وأدعية</a></li>
+                    <li><a href="قراءة القرآن.html"><i class="fas fa-book-quran"></i> القرآن الكريم</a></li>
+                    <li><a href="اختبارات.html"><i class="fas fa-question-circle"></i> اختبارات تفاعلية</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- المحتوى الرئيسي -->
+        <main class="main-content">
+            <!-- شريط أعلى الصفحة -->
+            <div class="top-bar">
+                <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                <div class="logo-mobile">طريق الجنة</div>
+            </div>
+
+            <!-- قسم البطل -->
+            <section class="hero-section" id="home">
+                <div class="hero-content">
+                    <h1>طريق الجنة</h1>
+                    <p>منصة شاملة لتعلم الدين الإسلامي بطرق تفاعلية حديثة تناسب العصر</p>
+                    <div class="hero-buttons">
+                        <a href="#learn" class="btn pulse">ابدأ رحلتك الآن</a>
+                        <a href="#quran" class="btn btn-outline">استكشف القرآن الكريم</a>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- قسم الأذكار -->
+            <section class="section" id="azkar">
+                <h2 class="section-title with-icon"><i class="fas fa-praying-hands"></i> أذكار وأدعية</h2>
+                <div class="azkar-grid">
+                    <div class="zekr-card">
+                        <h3><i class="fas fa-sun"></i> أذكار الصباح</h3>
+                        <p class="zekr-text">أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ، لَا إِلَٰهَ
+                            إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَىٰ
+                            كُلِّ شَيْءٍ قَدِيرٌ.</p>
+                        <span class="zekr-count">مرة واحدة</span>
+                        <a href="اذكار الصباح.html"><button class="btn btn-block" style="margin-top: 0.8rem;">إقرأ
+                                الأذكار</button></a>
+                    </div>
+
+                    <div class="zekr-card">
+                        <h3><i class="fas fa-moon"></i> أذكار المساء</h3>
+                        <p class="zekr-text">اللَّهُمَّ بِكَ أَمْسَيْنَا، وَبِكَ أَصْبَحْنَا، وَبِكَ نَحْيَا، وَبِكَ
+                            نَمُوتُ، وَإِلَيْكَ النُّشُورُ.</p>
+                        <span class="zekr-count">مرة واحدة</span>
+                        <a href="اذكار المساء.html"><button class="btn btn-block" style="margin-top: 0.8rem;">إقرأ
+                                الأذكار</button></a>
+                    </div>
+
+                    <div class="zekr-card">
+                        <h3><i class="fas fa-bed"></i> أذكار النوم</h3>
+                        <p class="zekr-text">بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا.</p>
+                        <span class="zekr-count">مرة واحدة</span>
+                        <a href="اذكار النوم.html"><button class="btn btn-block" style="margin-top: 0.8rem;">إقرأ
+                                الأذكار</button></a>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 1.5rem;">
+                    <a href="الاذكار.html" class="btn">تصفح جميع الأذكار والأدعية</a>
+                </div>
+            </section>
+
+            <!-- قسم القرآن الكريم -->
+            <section class="quran-section" id="quran">
+                <h2 class="section-title with-icon"><i class="fas fa-book-quran"></i> القرآن الكريم</h2>
+                <div class="quran-grid">
+
+                    <div class="quran-card floating" style="animation-delay: 0.5s;">
+                        <i class="fas fa-book"></i>
+                        <h3>قراءة القرآن</h3>
+                        <p>حافظ على وردك اليومي من القرآن الكريم</p>
+                        <a href="قراءة القرآن.html" class="btn" style="margin-top: 0.8rem;">إبدأ</a>
+                    </div>
+                </div>
+            </section>
+
+    </div>
+    </section>
+
+
+
+
+
+
+    <!-- التذييل -->
+    <!-- Footer المعتاد -->
+    <!-- بداية الفوتور - Footer (من صفحة أركان الإسلام) -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>عن طريق الجنة</h3>
+                    <p>منصة إسلامية شاملة تهدف إلى تقديم محتوى تعليمي متميز في الدين الإسلامي بطرق تفاعلية
+                        حديثة.</p>
+                </div>
+
+                <div class="footer-column">
+                    <h3>روابط</h3>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-home"></i>الرئيسية</a></li>
+                        <li><a href="index.html#learn"><i class="fas fa-graduation-cap"></i> تعلم الدين</a></li>
+                        <li><a href="الاذكار.html"><i class="fas fa-pray"></i> أذكار وأدعية</a></li>
+                        <li><a href="قراءة القرآن.html"><i class="fas fa-book-quran"></i> القرآن الكريم</a></li>
+                        <li><a href="اختبارات.html"><i class="fas fa-question-circle"></i> اختبارات تفاعلية</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                © <script>document.write(new Date().getFullYear())</script> طريق الجنة - جميع الحقوق محفوظة
+            </div>
+        </div>
+    </footer>
+    <!-- نهاية الفوتور -->
+    </main>
+    </div>
+
+
+
+
+
+    <script>
+        // حالة المستخدم
+        let isLoggedIn = false;
+        let currentUser = null;
+
+        // عناصر DOM
+        const sidebar = document.getElementById('sidebar');
+        const menuToggle = document.getElementById('menuToggle');
+        const authBtn = document.getElementById('authBtn');
+        const sidebarAuthBtn = document.getElementById('sidebarAuthBtn');
+        const notificationsBtn = document.getElementById('notificationsBtn');
+        const welcomeModal = document.getElementById('welcomeModal');
+        const loginModal = document.getElementById('loginModal');
+        const registerModal = document.getElementById('registerModal');
+        const socialModal = document.getElementById('socialModal');
+
+        // عناصر البحث
+        const searchInput = document.getElementById('searchInput');
+        const searchResults = document.getElementById('searchResults');
+        const searchIcon = document.getElementById('searchIcon');
+
+        // عناصر التعليقات
+        const commentText = document.getElementById('commentText');
+        const submitComment = document.getElementById('submitComment');
+        const badComment = document.getElementById('badComment');
+
+        // عناصر الإغلاق
+        const closeWelcome = document.getElementById('closeWelcome');
+        const skipWelcome = document.getElementById('skipWelcome');
+        const closeLogin = document.getElementById('closeLogin');
+        const closeRegister = document.getElementById('closeRegister');
+        const closeSocial = document.getElementById('closeSocial');
+
+        // عناصر التنقل بين النوافذ
+        const loginWelcome = document.getElementById('loginWelcome');
+        const registerLink = document.getElementById('registerLink');
+        const loginLink = document.getElementById('loginLink');
+
+        // عناصر الأزرار
+        const loginBtn = document.getElementById('loginBtn');
+        const registerBtn = document.getElementById('registerBtn');
+        const registerError = document.getElementById('registerError');
+
+        // عناصر تسجيل الدخول الاجتماعي
+        const googleLogin = document.getElementById('googleLogin');
+        const facebookLogin = document.getElementById('facebookLogin');
+        const googleRegister = document.getElementById('googleRegister');
+        const facebookRegister = document.getElementById('facebookRegister');
+        const socialModalTitle = document.getElementById('socialModalTitle');
+        const socialUserImage = document.getElementById('socialUserImage');
+        const socialUserEmail = document.getElementById('socialUserEmail');
+        const cancelSocial = document.getElementById('cancelSocial');
+        const confirmSocial = document.getElementById('confirmSocial');
+
+        // الكلمات المحظورة في التعليقات
+        const badWords = ['سيء', 'قبيح', 'بذيء', 'سخيف', 'غبي', 'كراهية', 'عنصرية'];
+
+        // عرض/إخفاء الشريط الجانبي
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        // إغلاق الشريط الجانبي عند النقر خارجها
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !menuToggle.contains(e.target)) {
+                sidebar.classList.remove('active');
+            }
+        });
+
+        // إدارة البحث
+        searchInput.addEventListener('focus', () => {
+            document.querySelector('.search-bar').classList.add('active');
+            searchResults.classList.add('active');
+        });
+
+        searchInput.addEventListener('blur', () => {
+            setTimeout(() => {
+                document.querySelector('.search-bar').classList.remove('active');
+                searchResults.classList.remove('active');
+            }, 200);
+        });
+
+        searchIcon.addEventListener('click', () => {
+            if (searchInput.value.trim() !== '') {
+                performSearch(searchInput.value.trim());
+            }
+        });
+
+        searchInput.addEventListener('keyup', (e) => {
+            if (e.key === 'Enter' && searchInput.value.trim() !== '') {
+                performSearch(searchInput.value.trim());
+            }
+        });
+
+        function performSearch(query) {
+            // هنا سيتم تنفيذ البحث الفعلي في قاعدة البيانات
+            console.log('بحث عن:', query);
+            // عرض نتائج البحث
+            searchResults.classList.add('active');
+        }
+
+        // إدارة التعليقات
+        submitComment.addEventListener('click', () => {
+            const comment = commentText.value.trim();
+
+            if (comment === '') {
+                alert('الرجاء إدخال تعليق');
+                return;
+            }
+
+            // التحقق من وجود كلمات غير لائقة
+            const hasBadWord = badWords.some(word => comment.includes(word));
+
+            if (hasBadWord) {
+                badComment.style.display = 'block';
+                commentText.value = '';
+
+                // إخفاء الرسالة بعد 5 ثواني
+                setTimeout(() => {
+                    badComment.style.display = 'none';
+                }, 5000);
+            } else {
+                // إضافة التعليق (في الواقع سيتم إرساله للسيرفر)
+                console.log('تعليق جديد:', comment);
+                commentText.value = '';
+                alert('شكرًا على تعليقك، سيتم مراجعته من قبل الإدارة');
+            }
+        });
+
+        // تحديث واجهة المستخدم حسب حالة تسجيل الدخول
+        function updateAuthUI() {
+            const badges = document.querySelectorAll('.badge');
+            const userProfile = document.querySelector('.user-profile');
+
+            if (isLoggedIn && currentUser) {
+                // تحديث الواجهة بعد تسجيل الدخول
+                authBtn.innerHTML = `<img src="${currentUser.image || 'https://via.placeholder.com/150'}" alt="صورة المستخدم" style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover;">`;
+                sidebarAuthBtn.innerHTML = '<i class="fas fa-sign-out-alt"></i> تسجيل الخروج';
+                userProfile.style.display = 'flex';
+                userProfile.querySelector('.user-name').textContent = currentUser.name;
+                userProfile.querySelector('img').src = currentUser.image || 'https://via.placeholder.com/150';
+
+                // إظهار الإشعارات (مع أرقام صفرية)
+                badges.forEach(badge => {
+                    badge.style.display = 'flex';
+                    badge.textContent = '0';
+                });
+            } else {
+                // تحديث الواجهة عند تسجيل الخروج
+                authBtn.innerHTML = '<i class="fas fa-sign-in-alt"></i>';
+                sidebarAuthBtn.innerHTML = '<i class="fas fa-sign-in-alt"></i> تسجيل الدخول';
+                userProfile.style.display = 'none';
+                currentUser = null;
+
+                // إخفاء الإشعارات
+                badges.forEach(badge => {
+                    badge.style.display = 'none';
+                });
+            }
+        }
+
+        // عرض نافذة الترحيب عند أول زيارة
+        function showWelcomeModal() {
+            if (!localStorage.getItem('welcomeShown')) {
+                welcomeModal.classList.add('active');
+                localStorage.setItem('welcomeShown', 'true');
+            }
+        }
+
+        // إدارة النوافذ المنبثقة
+        function showModal(modal) {
+            modal.classList.add('active');
+        }
+
+        function hideModal(modal) {
+            modal.classList.remove('active');
+        }
+
+        function hideAllModals() {
+            [welcomeModal, loginModal, registerModal, socialModal].forEach(hideModal);
+        }
+
+        // أحداث النوافذ
+        // الترحيب
+        loginWelcome.addEventListener('click', () => {
+            hideModal(welcomeModal);
+            showModal(loginModal);
+        });
+
+        skipWelcome.addEventListener('click', () => {
+            hideModal(welcomeModal);
+        });
+
+        closeWelcome.addEventListener('click', () => {
+            hideModal(welcomeModal);
+        });
+
+        // تسجيل الدخول
+        authBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (isLoggedIn) {
+                // تسجيل الخروج
+                isLoggedIn = false;
+                updateAuthUI();
+            } else {
+                // عرض نافذة تسجيل الدخول
+                showModal(loginModal);
+            }
+        });
+
+        sidebarAuthBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (isLoggedIn) {
+                // تسجيل الخروج
+                isLoggedIn = false;
+                updateAuthUI();
+            } else {
+                // عرض نافذة تسجيل الدخول
+                showModal(loginModal);
+            }
+            sidebar.classList.remove('active');
+        });
+
+        closeLogin.addEventListener('click', () => {
+            hideModal(loginModal);
+        });
+
+        // إنشاء حساب
+        registerLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            hideModal(loginModal);
+            showModal(registerModal);
+        });
+
+        closeRegister.addEventListener('click', () => {
+            hideModal(registerModal);
+        });
+
+        // العودة لتسجيل الدخول
+        loginLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            hideModal(registerModal);
+            showModal(loginModal);
+        });
+
+        // أحداث الأزرار
+        loginBtn.addEventListener('click', () => {
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value.trim();
+
+            if (!email || !password) {
+                alert('الرجاء إدخال البريد الإلكتروني وكلمة المرور');
+                return;
+            }
+
+            // هنا كود تسجيل الدخول الفعلي
+            isLoggedIn = true;
+            currentUser = {
+                name: 'محمد أحمد',
+                email: email,
+                image: 'https://via.placeholder.com/150'
+            };
+
+            updateAuthUI();
+            hideModal(loginModal);
+            alert('تم تسجيل الدخول بنجاح');
+        });
+
+        registerBtn.addEventListener('click', () => {
+            const name = document.getElementById('regName').value.trim();
+            const email = document.getElementById('regEmail').value.trim();
+            const password = document.getElementById('regPassword').value.trim();
+            const confirmPassword = document.getElementById('regConfirmPassword').value.trim();
+
+            // إخفاء أي رسائل خطأ سابقة
+            registerError.style.display = 'none';
+
+            // التحقق من صحة البيانات
+            if (!name || !email || !password || !confirmPassword) {
+                registerError.textContent = 'الرجاء ملء جميع الحقول';
+                registerError.style.display = 'block';
+                return;
+            }
+
+            if (password.length < 6) {
+                registerError.textContent = 'كلمة المرور يجب أن تكون 6 أحرف على الأقل';
+                registerError.style.display = 'block';
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                registerError.textContent = 'كلمتا المرور غير متطابقتين';
+                registerError.style.display = 'block';
+                return;
+            }
+
+            // هنا كود إنشاء الحساب الفعلي
+            isLoggedIn = true;
+            currentUser = {
+                name: name,
+                email: email,
+                image: 'https://via.placeholder.com/150'
+            };
+
+            updateAuthUI();
+            hideModal(registerModal);
+            alert('تم إنشاء الحساب بنجاح! مرحبًا بك في طريق الجنة');
+        });
+
+        // تسجيل الدخول عبر وسائل التواصل الاجتماعي
+        function showSocialModal(provider, userData) {
+            socialModalTitle.textContent = `تسجيل الدخول ب${provider}`;
+            socialUserImage.src = userData.image || 'https://via.placeholder.com/150';
+            socialUserEmail.textContent = userData.email;
+            showModal(socialModal);
+        }
+
+        googleLogin.addEventListener('click', () => {
+            // محاكاة بيانات جوجل
+            const googleUser = {
+                name: 'محمد أحمد',
+                email: 'mohamed@gmail.com',
+                image: 'https://via.placeholder.com/150'
+            };
+            showSocialModal('جوجل', googleUser);
+        });
+
+        facebookLogin.addEventListener('click', () => {
+            // محاكاة بيانات فيسبوك
+            const facebookUser = {
+                name: 'أحمد محمد',
+                email: 'ahmed@facebook.com',
+                image: 'https://via.placeholder.com/150'
+            };
+            showSocialModal('فيسبوك', facebookUser);
+        });
+
+        googleRegister.addEventListener('click', () => {
+            // محاكاة بيانات جوجل
+            const googleUser = {
+                name: 'محمد أحمد',
+                email: 'mohamed@gmail.com',
+                image: 'https://via.placeholder.com/150'
+            };
+            showSocialModal('جوجل', googleUser);
+        });
+
+        facebookRegister.addEventListener('click', () => {
+            // محاكاة بيانات فيسبوك
+            const facebookUser = {
+                name: 'أحمد محمد',
+                email: 'ahmed@facebook.com',
+                image: 'https://via.placeholder.com/150'
+            };
+            showSocialModal('فيسبوك', facebookUser);
+        });
+
+        confirmSocial.addEventListener('click', () => {
+            isLoggedIn = true;
+            currentUser = {
+                name: socialModalTitle.textContent.includes('جوجل') ? 'محمد أحمد' : 'أحمد محمد',
+                email: socialUserEmail.textContent,
+                image: socialUserImage.src
+            };
+
+            updateAuthUI();
+            hideAllModals();
+            alert(`تم تسجيل الدخول بنجاح باستخدام ${socialModalTitle.textContent}`);
+        });
+
+        cancelSocial.addEventListener('click', () => {
+            hideModal(socialModal);
+        });
+
+        closeSocial.addEventListener('click', () => {
+            hideModal(socialModal);
+        });
+
+        // إخفاء النوافذ عند النقر خارجها
+        [welcomeModal, loginModal, registerModal, socialModal].forEach(modal => {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    hideModal(modal);
+                }
+            });
+        });
+
+        // تهيئة الواجهة عند التحميل
+        document.addEventListener('DOMContentLoaded', () => {
+            updateAuthUI();
+            showWelcomeModal();
+        });
+
+        // تأثيرات التمرير السلس
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+
+                // إغلاق القائمة إذا كانت مفتوحة
+                sidebar.classList.remove('active');
+            });
+        });
+    </script>
+
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('./sw.js', { scope: './' })
+                .then(registration => {
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                })
+                .catch(err => {
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+        });
+    }
+</script>
+</body>
+
+</html>

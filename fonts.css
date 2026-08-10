@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'AmiriQuran-Regular';
+    src: url('AmiriQuran-Regular.ttf');
+}
+:root{
+    --quran-font: 'AmiriQuran-Regular';
+}

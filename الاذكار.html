@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طريق الجنة - الأذكار والأدعية</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="طريق الجنة - الأذكار والأدعية - طريق الجنة: المنصة الذكية لتعليم الدين الإسلامي، القرآن الكريم، الأذكار، والاختبارات الدينية.">
+    <meta name="keywords" content="طريق الجنة, إسلام, قرآن كريم, أذكار, أدعية, تعليم الدين, طريق الجنة - الأذكار والأدعية">
+    <meta name="author" content="طريق الجنة">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#1a5f7a">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="طريق الجنة - الأذكار والأدعية">
+    <meta property="og:description" content="طريق الجنة - الأذكار والأدعية - طريق الجنة: المنصة الذكية لتعليم الدين الإسلامي.">
+    <meta property="og:image" content="/Logo.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="طريق الجنة - الأذكار والأدعية">
+    <meta name="twitter:description" content="طريق الجنة - الأذكار والأدعية - طريق الجنة: المنصة الذكية لتعليم الدين الإسلامي.">
+    <meta name="twitter:image" content="/Logo.png">
+
+    <link rel="shortcut icon" href="Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="Font Awesome/fontawesome-free-7.2.0-web/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #57c5b6;
+            --light-color: #f9f9f9;
+            --dark-color: #002b5b;
+            --text-color: #333;
+            --gold-color: #b8860b;
+            --sidebar-width: 280px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', sans-serif;
+            text-decoration: none;
+        }
+        
+        body {
+            background-color: var(--light-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            overflow-x: hidden;
+            background-image: url('https://www.transparenttextures.com/patterns/arabesque.png');
+            background-attachment: fixed;
+        }
+        
+        .container {
+            width: 95%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* التصميم العام */
+        .app-wrapper {
+            display: flex;
+            min-height: 100vh;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        /* الشريط الجانبي - دائماً برجر */
+        .sidebar {
+            position: fixed;
+            right: -280px;
+            top: 0;
+            width: var(--sidebar-width);
+            height: 100vh;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            overflow-y: auto;
+            transition: all 0.3s ease;
+            border-left: 3px solid var(--accent-color);
+        }
+        
+        .sidebar.active {
+            right: 0;
+        }
+        
+        .sidebar-header {
+            padding: 1.5rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            background-color: rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .sidebar-header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        
+        .sidebar-header .logo-img {
+            width: 40px;
+            height: 40px;
+            margin-left: 10px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .sidebar-menu {
+            padding: 1rem 0;
+        }
+        
+        .sidebar-menu ul {
+            list-style: none;
+        }
+        
+        .sidebar-menu ul li a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 1.5rem;
+            transition: all 0.3s;
+            position: relative;
+            font-size: 1rem;
+        }
+        
+        .sidebar-menu ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--accent-color);
+        }
+        
+        .sidebar-menu ul li a i {
+            margin-left: 10px;
+            width: 20px;
+            text-align: center;
+        }
+        
+        .sidebar-menu ul li.active a {
+            background-color: rgba(255, 255, 255, 0.15);
+            color: var(--accent-color);
+            border-right: 3px solid var(--accent-color);
+        }
+        
+        .sidebar-footer {
+            padding: 1rem;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: auto;
+        }
+        
+        .sidebar-footer .user-profile {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        .sidebar-footer .user-profile img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--accent-color);
+            margin-left: 10px;
+        }
+        
+        .sidebar-footer .user-profile .user-name {
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        
+        .sidebar-footer .auth-btn {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+        
+        .sidebar-footer .auth-btn:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        /* المحتوى الرئيسي */
+        .main-content {
+            flex: 1;
+            padding: 1rem;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        /* شريط أعلى الصفحة */
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem 1rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            margin-bottom: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .top-bar .menu-toggle {
+            background: none;
+            border: none;
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+        
+        .top-bar .menu-toggle:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        
+        .top-bar .logo-mobile {
+            font-weight: bold;
+            color: var(--primary-color);
+            display: block;
+        }
+        
+        .top-bar .search-container {
+            position: relative;
+            flex: 1;
+            max-width: 500px;
+            margin: 0 1rem;
+            display: none;
+        }
+        
+        .top-bar .user-actions {
+            display: flex;
+            align-items: center;
+        }
+        
+        .top-bar .user-actions .action-btn {
+            position: relative;
+            margin-left: 0.5rem;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+        
+        .top-bar .user-actions .action-btn:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        
+        /* أقسام الموقع */
+        .section {
+            padding: 2rem 0;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            text-align: center;
+            padding-bottom: 1rem;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(to right, var(--accent-color), var(--secondary-color));
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+        
+        .section-title.with-icon i {
+            margin-left: 10px;
+            color: var(--accent-color);
+        }
+        
+        /* قسم البطل */
+        .hero-section {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            background: linear-gradient(rgba(26, 95, 122, 0.85), rgba(21, 152, 149, 0.85)), url('https://images.unsplash.com/photo-1519735575114-0daa5b5d47e9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero-content h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero-content p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        /* بطاقات الأذكار */
+        .azkar-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .azkar-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border-bottom: 2px solid var(--accent-color);
+            position: relative;
+        }
+        
+        .azkar-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .azkar-header {
+            padding: 1.5rem;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            position: relative;
+            min-height: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .azkar-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.8rem;
+            color: white;
+        }
+        
+        .azkar-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .azkar-subtitle {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .azkar-body {
+            padding: 1.2rem;
+            min-height: 180px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .azkar-text {
+            color: #555;
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 1.2rem;
+            flex-grow: 1;
+            text-align: justify;
+        }
+        
+        .azkar-reference {
+            font-size: 0.8rem;
+            color: #777;
+            margin-bottom: 1rem;
+            font-style: italic;
+            border-right: 2px solid var(--accent-color);
+            padding-right: 0.8rem;
+        }
+        
+        .azkar-count {
+            display: inline-flex;
+            align-items: center;
+            background-color: rgba(87, 197, 182, 0.1);
+            color: var(--secondary-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-top: auto;
+        }
+        
+        .azkar-count i {
+            margin-left: 5px;
+        }
+        
+        .azkar-actions {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        /* أزرار الموقع */
+        .btn {
+            display: inline-block;
+            background: linear-gradient(to right, var(--accent-color), var(--secondary-color));
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            font-size: 0.9rem;
+            box-shadow: 0 3px 8px rgba(87, 197, 182, 0.3);
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(87, 197, 182, 0.4);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            box-shadow: none;
+        }
+        
+        .btn-outline:hover {
+            background: linear-gradient(to right, var(--accent-color), var(--secondary-color));
+            color: white;
+        }
+        
+        .btn-block {
+            display: block;
+            width: 100%;
+        }
+        
+        .btn-sm {
+            padding: 0.4rem 0.8rem;
+            font-size: 0.8rem;
+        }
+        
+        /* قسم العداد */
+        .counter-section {
+            background: linear-gradient(rgba(26, 95, 122, 0.9), rgba(21, 152, 149, 0.9)), url('https://www.transparenttextures.com/patterns/arabesque.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 2.5rem 0;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        
+        .counter-section .section-title {
+            color: white;
+        }
+        
+        .counter-section .section-title:after {
+            background: linear-gradient(to right, var(--light-color), var(--accent-color));
+        }
+        
+        .counter-display {
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 1.5rem 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .counter-controls {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        /* قسم الميزات */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to right, var(--accent-color), var(--secondary-color));
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+        
+        .feature-card h3 {
+            margin-bottom: 0.8rem;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+        
+        .feature-card p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+        
+        /* التذييل */
+        footer {
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 0 1rem;
+            margin-top: 2rem;
+            position: relative;
+        }
+        
+        footer:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 10px;
+            background: linear-gradient(to right, var(--accent-color), var(--secondary-color));
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-column h3 {
+            color: white;
+            margin-bottom: 1.2rem;
+            font-size: 1.2rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 40px;
+            height: 2px;
+            background: linear-gradient(to right, var(--accent-color), white);
+        }
+        
+        .footer-column p {
+            margin-bottom: 1rem;
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 0.6rem;
+        }
+        
+        .footer-column ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: all 0.3s;
+            display: block;
+            padding: 0.2rem 0;
+            font-size: 0.9rem;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--accent-color);
+            transform: translateX(-3px);
+        }
+        
+        .footer-column ul li a i {
+            margin-left: 6px;
+            color: var(--accent-color);
+            font-size: 0.8rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s;
+            font-size: 1rem;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        /* تأثيرات إضافية */
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .pulse {
+            animation: pulse 3s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+        
+        /* تصميم متجاوب */
+        @media (max-width: 768px) {
+            .top-bar .logo-mobile {
+                display: block;
+            }
+            
+            .hero-section {
+                height: 300px;
+            }
+            
+            .hero-content h1 {
+                font-size: 1.7rem;
+            }
+            
+            .hero-content p {
+                font-size: 1rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+            
+            .hero-buttons .btn {
+                width: 100%;
+            }
+            
+            .azkar-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+            
+            .counter-display {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-section {
+                height: 280px;
+            }
+            
+            .hero-content h1 {
+                font-size: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 1.3rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .azkar-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .counter-display {
+                font-size: 2rem;
+            }
+            
+            .counter-controls {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    
+
+</style>
+
+    <link rel="manifest" href="./manifest.json">
+</head>
+<body>
+    <div class="app-wrapper">
+        <!-- الشريط الجانبي - دائماً مخفي ويظهر كنافذة -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <span>طريق الجنة</span>
+                </div>
+            </div>
+            <nav class="sidebar-menu">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i>الرئيسية</a></li>
+                    <li><a href="index.html#learn"><i class="fas fa-graduation-cap"></i> تعلم الدين</a></li>
+                    <li><a href="الاذكار.html"><i class="fas fa-pray"></i> أذكار وأدعية</a></li>
+                    <li><a href="قراءة القرآن.html"><i class="fas fa-book-quran"></i> القرآن الكريم</a></li>
+                    <li><a href="اختبارات.html"><i class="fas fa-question-circle"></i> اختبارات تفاعلية</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <!-- المحتوى الرئيسي -->
+        <main class="main-content">
+            <!-- شريط أعلى الصفحة -->
+            <div class="top-bar">
+                <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                <div class="logo-mobile">طريق الجنة</div>
+            </div>
+            
+            <!-- قسم البطل -->
+            <section class="hero-section">
+                <div class="hero-content">
+                    <h1>الأذكار والأدعية اليومية</h1>
+                    <p>حصن نفسك بالأذكار الصباحية والمسائية وأدعية اليوم والليلة لتكون في حفظ الله ورعايته</p>
+                    <div class="hero-buttons">
+                        <a href="#azkar" class="btn pulse">تصفح الأذكار</a>
+                        <a href="#counter" class="btn pulse">عداد الأذكار</a>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- قسم العداد -->
+            <section class="counter-section" id="counter">
+                <h2 class="section-title with-icon"><i class="fas fa-counter"></i> عداد الأذكار</h2>
+                <p style="margin-bottom: 1rem; opacity: 0.9;">استخدم العداد لتتبع عدد مرات تكرار الذكر</p>
+                <div class="counter-display" id="counterDisplay">0</div>
+                <div class="counter-controls">
+                    <button class="btn" id="incrementBtn">
+                        <i class="fas fa-plus"></i> زيادة
+                    </button>
+                    <button class="btn pulse" id="resetBtn">
+                        <i class="fas fa-redo"></i> إعادة تعيين
+                    </button>
+                    
+                </div>
+                <p style="margin-top: 1.5rem; font-size: 0.9rem; opacity: 0.8;">قال رسول الله ﷺ: "من قال سبحان الله وبحمده، غرست له بها نخلة في الجنة"</p>
+            </section>
+            
+            <!-- قسم الأذكار -->
+            <section class="section" id="azkar">
+                <h2 class="section-title with-icon"><i class="fas fa-praying-hands"></i> الأذكار اليومية</h2>
+                <p style="text-align: center; margin-bottom: 2rem; color: var(--text-color); max-width: 800px; margin-left: auto; margin-right: auto;">اختر فئة الذكر التي تريدها من القائمة لتطمئن قلوبكم بذكر الله</p>
+                
+                <div class="azkar-grid">
+                    <!-- أذكار الصباح -->
+                    <div class="azkar-card">
+                        <div class="azkar-header">
+                            <div class="azkar-icon">
+                                <i class="fas fa-sun"></i>
+                            </div>
+                            <div class="azkar-title">أذكار الصباح</div>
+                            <div class="azkar-subtitle">من طلوع الفجر إلى الزوال</div>
+                        </div>
+                        <div class="azkar-body">
+                            <p class="azkar-text">أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ، لَا إِلَٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ.</p>
+                            <div class="azkar-reference">رواه مسلم</div>
+                            <div class="azkar-count">
+                                <i class="fas fa-repeat"></i> مرة واحدة
+                            </div>
+                            <div class="azkar-actions">
+                                <a href="اذكار الصباح.html">
+                                    <button class="btn btn-sm btn-block listen-btn" data-text="أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ، لَا إِلَٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ.">
+                                        <i class="fas fa-book"></i> إقرأ
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- أذكار المساء -->
+                    <div class="azkar-card">
+                        <div class="azkar-header">
+                            <div class="azkar-icon">
+                                <i class="fas fa-moon"></i>
+                            </div>
+                            <div class="azkar-title">أذكار المساء</div>
+                            <div class="azkar-subtitle">من بعد العصر إلى منتصف الليل</div>
+                        </div>
+                        <div class="azkar-body">
+                            <p class="azkar-text">اللَّهُمَّ بِكَ أَمْسَيْنَا، وَبِكَ أَصْبَحْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ، وَإِلَيْكَ النُّشُورُ.</p>
+                            <div class="azkar-reference">رواه الترمذي</div>
+                            <div class="azkar-count">
+                                <i class="fas fa-repeat"></i> مرة واحدة
+                            </div>
+                            <div class="azkar-actions">
+                                <a href="اذكار المساء.html">
+                                    <button class="btn btn-sm btn-block listen-btn" data-text="اللَّهُمَّ بِكَ أَمْسَيْنَا، وَبِكَ أَصْبَحْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ، وَإِلَيْكَ النُّشُورُ.">
+                                        <i class="fas fa-book"></i> إقرأ
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- أذكار النوم -->
+                    <div class="azkar-card">
+                        <div class="azkar-header">
+                            <div class="azkar-icon">
+                                <i class="fas fa-bed"></i>
+                            </div>
+                            <div class="azkar-title">أذكار النوم</div>
+                            <div class="azkar-subtitle">قبل النوم</div>
+                        </div>
+                        <div class="azkar-body">
+                            <p class="azkar-text">بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا. اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَافِيَةَ فِي الدُّنْيَا وَالْآخِرَةِ، اللَّهُمَّ قِنِي عَذَابَ النَّارِ.</p>
+                            <div class="azkar-reference">رواه البخاري</div>
+                            <div class="azkar-count">
+                                <i class="fas fa-repeat"></i> مرة واحدة
+                            </div>
+                            <div class="azkar-actions">
+                                <a href="اذكار النوم.html">
+                                    <button class="btn btn-sm btn-block listen-btn" data-text="بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا. اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَافِيَةَ فِي الدُّنْيَا وَالْآخِرَةِ، اللَّهُمَّ قِنِي عَذَابَ النَّارِ.">
+                                        <i class="fas fa-book"></i> إقرأ
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- أذكار بعد الصلاة -->
+                    <div class="azkar-card">
+                        <div class="azkar-header">
+                            <div class="azkar-icon">
+                                <i class="fas fa-mosque"></i>
+                            </div>
+                            <div class="azkar-title">أذكار بعد الصلاة</div>
+                            <div class="azkar-subtitle">بعد كل صلاة مفروضة</div>
+                        </div>
+                        <div class="azkar-body">
+                            <p class="azkar-text">أسْتَغْفِرُ اللهَ (ثلاثاً) اللَّهُمَّ أَنْتَ السَّلامُ، وَمِنْكَ السَّلامُ، تَبَارَكْتَ يا ذَا الْجَلالِ وَالإِكْرَامِ.</p>
+                            <div class="azkar-reference">رواه مسلم</div>
+                            <div class="azkar-count">
+                                <i class="fas fa-repeat"></i> مرة واحدة
+                            </div>
+                            <div class="azkar-actions">
+                                <a href="اذكار ما بعد الصلاة.html">
+                                    <button class="btn btn-sm btn-block listen-btn" data-text="أسْتَغْفِرُ اللهَ (ثلاثاً) اللَّهُمَّ أَنْتَ السَّلامُ، وَمِنْكَ السَّلامُ، تَبَارَكْتَ يا ذَا الْجَلالِ وَالإِكْرَامِ.">
+                                        <i class="fas fa-book"></i> إقرأ
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- أذكار الاستيقاظ -->
+                    <div class="azkar-card">
+                        <div class="azkar-header">
+                            <div class="azkar-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <div class="azkar-title">أذكار الاستيقاظ</div>
+                            <div class="azkar-subtitle">عند الاستيقاظ من النوم</div>
+                        </div>
+                        <div class="azkar-body">
+                            <p class="azkar-text">الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا، وَإِلَيْهِ النُّشُورُ. الْحَمْدُ لِلَّهِ الَّذِي عَافَانِي فِي جَسَدِي، وَرَدَّ عَلَيَّ رُوحِي، وَأَذِنَ لِي بِذِكْرِهِ.</p>
+                            <div class="azkar-reference">رواه البخاري</div>
+                            <div class="azkar-count">
+                                <i class="fas fa-repeat"></i> مرة واحدة
+                            </div>
+                            <div class="azkar-actions">
+                                <a href="اذكار الإستيقاظ.html">
+                                    <button class="btn btn-sm btn-block listen-btn" data-text="الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا، وَإِلَيْهِ النُّشُورُ. الْحَمْدُ لِلَّهِ الَّذِي عَافَانِي فِي جَسَدِي، وَرَدَّ عَلَيَّ رُوحِي، وَأَذِنَ لِي بِذِكْرِهِ.">
+                                        <i class="fas fa-book"></i> إقرأ
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- أذكار دخول المنزل -->
+                    <div class="azkar-card">
+                        <div class="azkar-header">
+                            <div class="azkar-icon">
+                                <i class="fas fa-door-open"></i>
+                            </div>
+                            <div class="azkar-title">أذكار الدخول او الخروج من البيت</div>
+                            <div class="azkar-subtitle">عند دخول او الخروج من البيت</div>
+                        </div>
+                        <div class="azkar-body">
+                            <p class="azkar-text">بِسْمِ اللَّهِ وَلَجْنَا، وَبِسْمِ اللَّهِ خَرَجْنَا، وَعَلَى اللَّهِ رَبِّنَا تَوَكَّلْنَا. اللَّهُمَّ إِنِّي أَسْأَلُكَ خَيْرَ الْمَوْلِجِ، وَخَيْرَ الْمَخْرَجِ.</p>
+                            <div class="azkar-reference">رواه أبو داود</div>
+                            <div class="azkar-count">
+                                <i class="fas fa-repeat"></i> مرة واحدة
+                            </div>
+                            <div class="azkar-actions">
+                                <a href="اذكار دخول المنزل.html">
+                                    <button class="btn btn-sm btn-block listen-btn" data-text="بِسْمِ اللَّهِ وَلَجْنَا، وَبِسْمِ اللَّهِ خَرَجْنَا، وَعَلَى اللَّهِ رَبِّنَا تَوَكَّلْنَا. اللَّهُمَّ إِنِّي أَسْأَلُكَ خَيْرَ الْمَوْلِجِ، وَخَيْرَ الْمَخْرَجِ.">
+                                        <i class="fas fa-book"></i> إقرأ
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <!-- أذكار بعد الوضوء -->
+                    <div class="azkar-card">
+                        <div class="azkar-header">
+                            <div class="azkar-icon">
+                                <i class="fas fa-water"></i>
+                            </div>
+                            <div class="azkar-title">أذكار بعد الوضوء</div>
+                            <div class="azkar-subtitle">بعد الانتهاء من الوضوء</div>
+                        </div>
+                        <div class="azkar-body">
+                            <p class="azkar-text">أَشْهَدُ أَنْ لا إِلَهَ إِلا اللَّهُ وَحْدَهُ لا شَرِيكَ لَهُ، وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ. اللَّهُمَّ اجْعَلْنِي مِنَ التَّوَّابِينَ، وَاجْعَلْنِي مِنَ الْمُتَطَهِّرِينَ.</p>
+                            <div class="azkar-reference">رواه الترمذي</div>
+                            <div class="azkar-count">
+                                <i class="fas fa-repeat"></i> مرة واحدة
+                            </div>
+                            <div class="azkar-actions">
+                                <a href="اذكار بعد الوضوء.html">
+                                    <button class="btn btn-sm btn-block listen-btn" data-text="أَشْهَدُ أَنْ لا إِلَهَ إِلا اللَّهُ وَحْدَهُ لا شَرِيكَ لَهُ، وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ. اللَّهُمَّ اجْعَلْنِي مِنَ التَّوَّابِينَ، وَاجْعَلْنِي مِنَ الْمُتَطَهِّرِينَ.">
+                                        <i class="fas fa-book"></i> إقرأ
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- أذكار قبل الطعام -->
+                    <div class="azkar-card">
+                        <div class="azkar-header">
+                            <div class="azkar-icon">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <div class="azkar-title">أذكار قبل الطعام</div>
+                            <div class="azkar-subtitle">قبل البدء في الأكل</div>
+                        </div>
+                        <div class="azkar-body">
+                            <p class="azkar-text">بِسْمِ اللَّهِ. اللَّهُمَّ بَارِكْ لَنَا فِيمَا رَزَقْتَنَا، وَقِنَا عَذَابَ النَّارِ. بِسْمِ اللَّهِ وَعَلَى بَرَكَةِ اللَّهِ.</p>
+                            <div class="azkar-reference">رواه البخاري ومسلم</div>
+                            <div class="azkar-count">
+                                <i class="fas fa-repeat"></i> مرة واحدة
+                            </div>
+                            <div class="azkar-actions">
+                                <a href="اذكار قبل الطعام.html">
+                                    <button class="btn btn-sm btn-block listen-btn" data-text="بِسْمِ اللَّهِ. اللَّهُمَّ بَارِكْ لَنَا فِيمَا رَزَقْتَنَا، وَقِنَا عَذَابَ النَّارِ. بِسْمِ اللَّهِ وَعَلَى بَرَكَةِ اللَّهِ.">
+                                        <i class="fas fa-book"></i> إقرأ
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- أذكار بعد الطعام -->
+                    <div class="azkar-card">
+                        <div class="azkar-header">
+                            <div class="azkar-icon">
+                                <i class="fas fa-concierge-bell"></i>
+                            </div>
+                            <div class="azkar-title">أذكار بعد الطعام</div>
+                            <div class="azkar-subtitle">بعد الانتهاء من الأكل</div>
+                        </div>
+                        <div class="azkar-body">
+                            <p class="azkar-text">الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنَا وَسَقَانَا، وَجَعَلَنَا مُسْلِمِينَ. الْحَمْدُ لِلَّهِ حَمْدًا كَثِيرًا طَيِّبًا مُبَارَكًا فِيهِ.</p>
+                            <div class="azkar-reference">رواه أبو داود</div>
+                            <div class="azkar-count">
+                                <i class="fas fa-repeat"></i> مرة واحدة
+                            </div>
+                            <div class="azkar-actions">
+                                <a href="اذكار بعد الطعام.html">
+                                    <button class="btn btn-sm btn-block listen-btn" data-text="الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنَا وَسَقَانَا، وَجَعَلَنَا مُسْلِمِينَ. الْحَمْدُ لِلَّهِ حَمْدًا كَثِيرًا طَيِّبًا مُبَارَكًا فِيهِ.">
+                                        <i class="fas fa-book"></i> إقرأ
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- أذكار بعد الآذان -->
+                    <div class="azkar-card">
+                        <div class="azkar-header">
+                            <div class="azkar-icon">
+                                <i class="fas fa-microphone-alt"></i>
+                            </div>
+                            <div class="azkar-title">أذكار بعد الآذان</div>
+                            <div class="azkar-subtitle">بعد انتهاء المؤذن من الآذان</div>
+                        </div>
+                        <div class="azkar-body">
+                            <p class="azkar-text">اللَّهُمَّ رَبَّ هَذِهِ الدَّعْوَةِ التَّامَّةِ، وَالصَّلَاةِ الْقَائِمَةِ، آتِ مُحَمَّدًا الْوَسِيلَةَ وَالْفَضِيلَةَ، وَابْعَثْهُ مَقَامًا مَحْمُودًا الَّذِي وَعَدْتَهُ.</p>
+                            <div class="azkar-reference">رواه البخاري</div>
+                            <div class="azkar-count">
+                                <i class="fas fa-repeat"></i> مرة واحدة
+                            </div>
+                            <div class="azkar-actions">
+                                <a href="اذكار بعد الأذان.html">
+                                    <button class="btn btn-sm btn-block listen-btn" data-text="الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنَا وَسَقَانَا، وَجَعَلَنَا مُسْلِمِينَ. الْحَمْدُ لِلَّهِ حَمْدًا كَثِيرًا طَيِّبًا مُبَارَكًا فِيهِ.">
+                                        <i class="fas fa-book"></i> إقرأ
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- أذكار ركوب المواصلات -->
+                    <div class="azkar-card">
+                        <div class="azkar-header">
+                            <div class="azkar-icon">
+                                <i class="fas fa-car"></i>
+                            </div>
+                            <div class="azkar-title">أذكار المواصلات</div>
+                            <div class="azkar-subtitle">عند ركوب وسيلة النقل</div>
+                        </div>
+                        <div class="azkar-body">
+                            <p class="azkar-text">سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ، وَإِنَّا إِلَى رَبِّنَا لَمُنْقَلِبُونَ. الْحَمْدُ لِلَّهِ، سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَذَا.</p>
+                            <div class="azkar-reference">رواه مسلم</div>
+                            <div class="azkar-count">
+                                <i class="fas fa-repeat"></i> مرة واحدة
+                            </div>
+                            <div class="azkar-actions">
+                                <a href="اذكار المواصلات.html">
+                                    <button class="btn btn-sm btn-block listen-btn" data-text="سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ، وَإِنَّا إِلَى رَبِّنَا لَمُنْقَلِبُونَ. الْحَمْدُ لِلَّهِ، سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَذَا.">
+                                        <i class="fas fa-book"></i> إقرأ
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- قسم الميزات -->
+            <section class="section">
+                <h2 class="section-title with-icon"><i class="fas fa-star"></i> فوائد الأذكار</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>طمأنينة القلب</h3>
+                        <p>ذكر الله يطمئن القلوب ويزيل الهموم والغموم، قال تعالى: "ألا بذكر الله تطمئن القلوب"</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>حصن حصين</h3>
+                        <p>الأذكار تحفظ المسلم من الشيطان وتقيه من الشرور والمكروهات</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h3>نمو الإيمان</h3>
+                        <p>كثرة الذكر تزيد الإيمان وتقويه في القلب وتجعله ينمو كالنبات الطيب</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- التذييل -->
+            <!-- Footer المعتاد -->
+            <!-- بداية الفوتور - Footer (من صفحة أركان الإسلام) -->
+            <footer>
+                <div class="container">
+                    <div class="footer-content">
+                        <div class="footer-column">
+                            <h3>عن طريق الجنة</h3>
+                            <p>منصة إسلامية شاملة تهدف إلى تقديم محتوى تعليمي متميز في الدين الإسلامي بطرق تفاعلية
+                                حديثة.</p>
+                        </div>
+
+                        <div class="footer-column">
+                            <h3>روابط</h3>
+                            <ul>
+                                <li><a href="index.html"><i class="fas fa-home"></i>الرئيسية</a></li>
+                                <li><a href="index.html#learn"><i class="fas fa-graduation-cap"></i> تعلم الدين</a></li>
+                                <li><a href="الاذكار.html"><i class="fas fa-pray"></i> أذكار وأدعية</a></li>
+                                <li><a href="قراءة القرآن.html"><i class="fas fa-book-quran"></i> القرآن الكريم</a></li>
+                                <li><a href="اختبارات.html"><i class="fas fa-question-circle"></i> اختبارات تفاعلية</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="copyright">
+                        © <script>document.write(new Date().getFullYear())</script> طريق الجنة - جميع الحقوق محفوظة
+                    </div>
+                </div>
+            </footer>
+            <!-- نهاية الفوتور -->
+
+        </main>
+    </div>
+
+    <script>
+        // حالة المستخدم
+        let isLoggedIn = false;
+        let currentUser = null;
+        
+        // حالة العداد
+        let counter = 0;
+        
+        // عناصر DOM
+        const sidebar = document.getElementById('sidebar');
+        const menuToggle = document.getElementById('menuToggle');
+        const authBtn = document.getElementById('authBtn');
+        const sidebarAuthBtn = document.getElementById('sidebarAuthBtn');
+        const sidebarUserProfile = document.getElementById('sidebarUserProfile');
+        const sidebarUserImage = document.getElementById('sidebarUserImage');
+        const sidebarUserName = document.getElementById('sidebarUserName');
+        
+        // عناصر العداد
+        const counterDisplay = document.getElementById('counterDisplay');
+        const incrementBtn = document.getElementById('incrementBtn');
+        const resetBtn = document.getElementById('resetBtn');
+        const saveBtn = document.getElementById('saveBtn');
+        
+        // عرض/إخفاء الشريط الجانبي
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+        
+        // إغلاق الشريط الجانبي عند النقر خارجها
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !menuToggle.contains(e.target)) {
+                sidebar.classList.remove('active');
+            }
+        });
+        
+        // تحديث واجهة المستخدم حسب حالة تسجيل الدخول
+        function updateAuthUI() {
+            if (isLoggedIn && currentUser) {
+                // تحديث الواجهة بعد تسجيل الدخول
+                authBtn.innerHTML = `<i class="fas fa-user"></i>`;
+                sidebarAuthBtn.innerHTML = '<i class="fas fa-sign-out-alt"></i> تسجيل الخروج';
+                sidebarUserProfile.style.display = 'flex';
+                sidebarUserName.textContent = currentUser.name;
+                sidebarUserImage.src = currentUser.image || 'https://via.placeholder.com/150';
+            } else {
+                // تحديث الواجهة عند تسجيل الخروج
+                authBtn.innerHTML = '<i class="fas fa-sign-in-alt"></i>';
+                sidebarAuthBtn.innerHTML = '<i class="fas fa-sign-in-alt"></i> تسجيل الدخول';
+                sidebarUserProfile.style.display = 'none';
+                currentUser = null;
+            }
+        }
+        
+        
+        // إدارة العداد
+        function updateCounterDisplay() {
+            counterDisplay.textContent = counter;
+            
+            // تغيير اللون حسب القيمة
+            if (counter >= 100) {
+                counterDisplay.style.color = '#b8860b'; // ذهبي
+            } else if (counter >= 50) {
+                counterDisplay.style.color = '#57c5b6'; // فاتح
+            } else {
+                counterDisplay.style.color = 'white';
+            }
+            
+            // حفظ القيمة في التخزين المحلي
+            localStorage.setItem('azkarCounter', counter);
+        }
+        
+        incrementBtn.addEventListener('click', () => {
+            counter++;
+            updateCounterDisplay();
+            
+            // تأثير مرئي
+            counterDisplay.style.transform = 'scale(1.1)';
+            setTimeout(() => {
+                counterDisplay.style.transition = '.5s';
+                counterDisplay.style.transform = 'scale(1)';
+            }, 200);
+        });
+        
+        resetBtn.addEventListener('click', () => {
+            if (confirm('هل تريد إعادة تعيين العداد؟')) {
+                counter = 0;
+                updateCounterDisplay();
+            }
+        });
+        
+        saveBtn.addEventListener('click', () => {
+            alert(`تم حفظ العدد ${counter} في سجلك الشخصي`);
+            // هنا يمكن إرسال القيمة إلى السيرفر
+        });
+        
+        // استعادة قيمة العداد من التخزين المحلي
+        function loadCounterFromStorage() {
+            const savedCounter = localStorage.getItem('azkarCounter');
+            if (savedCounter !== null) {
+                counter = parseInt(savedCounter);
+                updateCounterDisplay();
+            }
+        }
+        
+        
+        // تهيئة واجهة المستخدم عند التحميل
+        document.addEventListener('DOMContentLoaded', () => {
+            updateAuthUI();
+            loadCounterFromStorage();
+            
+            // محاكاة تسجيل الدخول التلقائي للاختبار
+            setTimeout(() => {
+                if (!isLoggedIn) {
+                    isLoggedIn = true;
+                    currentUser = {
+                        name: 'محمد أحمد',
+                        email: 'mohamed@example.com',
+                        image: 'https://via.placeholder.com/150'
+                    };
+                    updateAuthUI();
+                }
+            }, 1000);
+        });
+        
+        // تأثيرات التمرير السلس
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+                
+                // إغلاق القائمة إذا كانت مفتوحة
+                sidebar.classList.remove('active');
+            });
+        });
+        
+        // تأثيرات عند التمرير
+        window.addEventListener('scroll', () => {
+            const cards = document.querySelectorAll('.azkar-card');
+            cards.forEach(card => {
+                const cardTop = card.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (cardTop < windowHeight - 100) {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }
+            });
+        });
+        
+        // تهيئة تأثيرات البطاقات
+        document.querySelectorAll('.azkar-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        });
+        
+        // تشغيل تأثيرات البطاقات بعد التحميل
+        setTimeout(() => {
+            document.querySelectorAll('.azkar-card').forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        }, 500);
+    </script>
+
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('./sw.js', { scope: './' })
+                .then(registration => {
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                })
+                .catch(err => {
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+        });
+    }
+</script>
+</body>
+</html>

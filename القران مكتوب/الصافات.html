@@ -1,0 +1,1840 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../fonts.css">
+    <title>قراءة سورة الصافات - طريق الجنة</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="قراءة سورة الصافات - طريق الجنة - طريق الجنة: المنصة الذكية لتعليم الدين الإسلامي، القرآن الكريم، الأذكار، والاختبارات الدينية.">
+    <meta name="keywords" content="طريق الجنة, إسلام, قرآن كريم, أذكار, أدعية, تعليم الدين, قراءة سورة الصافات - طريق الجنة">
+    <meta name="author" content="طريق الجنة">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#1a5f7a">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="قراءة سورة الصافات - طريق الجنة">
+    <meta property="og:description" content="قراءة سورة الصافات - طريق الجنة - طريق الجنة: المنصة الذكية لتعليم الدين الإسلامي.">
+    <meta property="og:image" content="/Logo.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="قراءة سورة الصافات - طريق الجنة">
+    <meta name="twitter:description" content="قراءة سورة الصافات - طريق الجنة - طريق الجنة: المنصة الذكية لتعليم الدين الإسلامي.">
+    <meta name="twitter:image" content="/Logo.png">
+
+    <link rel="shortcut icon" href="/Logo.png" type="image/x-icon">
+        <link rel="stylesheet" href="../Font Awesome/fontawesome-free-7.2.0-web/css/all.min.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #57c5b6;
+            --light-color: #f9f9f9;
+            --dark-color: #002b5b;
+            --text-color: #333;
+            --gold-color: #b8860b;
+            --sidebar-width: 280px;
+            --quran-font: 'Amiri', serif;
+            --quran-size: 2.2rem;
+            --line-height: 2.8;
+            --bg-page: #ffffff;
+            --bg-card: #ffffff;
+            --text-main: #1a1a1a;
+            --text-muted: #888;
+            --border-line: rgba(0, 0, 0, 0.06);
+            --nav-bg: #ffffff;
+            --shadow-soft: 0 2px 20px rgba(0, 0, 0, 0.04);
+            --controls-bg: #f8f8f8;
+            --btn-border: #ddd;
+            --btn-bg: white;
+            --btn-color: #888;
+        }
+
+        [data-theme="dark"] {
+            --bg-page: #0f0e17;
+            --bg-card: #1a1a2e;
+            --text-main: #e8e6e0;
+            --text-muted: #9a8a7a;
+            --border-line: rgba(255, 255, 255, 0.06);
+            --nav-bg: #1a1a2e;
+            --shadow-soft: 0 2px 20px rgba(0, 0, 0, 0.3);
+            --controls-bg: #252540;
+            --btn-border: rgba(255, 255, 255, 0.1);
+            --btn-bg: #1a1a2e;
+            --btn-color: #999;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', sans-serif;
+            text-decoration: none;
+        }
+
+        body {
+            background-color: var(--bg-page);
+            color: var(--text-color);
+            line-height: 1.8;
+            overflow-x: hidden;
+            background-attachment: fixed;
+            transition: background-color 0.4s ease, color 0.4s ease;
+        }
+
+        .container {
+            width: 95%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .app-wrapper {
+            display: flex;
+            min-height: 100vh;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        /* ===== سايدبار ===== */
+        .sidebar {
+            position: fixed;
+            right: -280px;
+            top: 0;
+            width: var(--sidebar-width);
+            height: 100vh;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            overflow-y: auto;
+            transition: all 0.3s ease;
+            border-left: 3px solid var(--accent-color);
+        }
+
+        [data-theme="dark"] .sidebar {
+            background: linear-gradient(135deg, #0f0e17, #1a1a2e);
+            border-left-color: var(--gold-color);
+        }
+
+        .sidebar.active {
+            right: 0;
+        }
+
+        .sidebar-header {
+            padding: 1.5rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            background-color: rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sidebar-header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .sidebar-menu {
+            padding: 1rem 0;
+        }
+
+        .sidebar-menu ul {
+            list-style: none;
+        }
+
+        .sidebar-menu ul li a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 1.5rem;
+            transition: all 0.3s;
+            position: relative;
+            font-size: 1rem;
+        }
+
+        .sidebar-menu ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--accent-color);
+        }
+
+        .sidebar-menu ul li a i {
+            margin-left: 10px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .sidebar-menu ul li.active a {
+            background-color: rgba(255, 255, 255, 0.15);
+            color: var(--accent-color);
+            border-right: 3px solid var(--accent-color);
+        }
+
+        /* ===== المحتوى ===== */
+        .main-content {
+            flex: 1;
+            padding: 1rem;
+            width: 100%;
+        }
+
+        /* ===== توب بار ===== */
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.6rem 1.2rem;
+            background: var(--nav-bg);
+            border-radius: 12px;
+            box-shadow: var(--shadow-soft);
+            margin-bottom: 1.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-line);
+        }
+
+        .top-bar .left-group {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .top-bar .menu-toggle {
+            background: none;
+            border: none;
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+
+        [data-theme="dark"] .top-bar .menu-toggle {
+            color: #e8e6e0;
+        }
+
+        .top-bar .menu-toggle:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        .top-bar .logo-mobile {
+            font-weight: 800;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            letter-spacing: -0.5px;
+        }
+
+        [data-theme="dark"] .top-bar .logo-mobile {
+            color: #e8e6e0;
+        }
+
+        .top-bar .right-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .top-bar .right-group button {
+            background: none;
+            border: none;
+            font-size: 1rem;
+            color: var(--primary-color);
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        [data-theme="dark"] .top-bar .right-group button {
+            color: #e8e6e0;
+        }
+
+        .top-bar .right-group button:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        /* ===== زر الثيم ===== */
+        .theme-toggle {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .theme-toggle .theme-icon {
+            transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            display: inline-block;
+        }
+
+        .theme-toggle:active .theme-icon {
+            transform: rotate(360deg) scale(1.2);
+        }
+
+        /* ===== هيدر السورة ===== */
+        .surah-header {
+            text-align: center;
+            padding: 0.5rem 0 0.8rem;
+        }
+
+        .surah-header .surah-name {
+            font-family: var(--quran-font);
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            font-weight: 700;
+            transition: color 0.3s ease;
+        }
+
+        [data-theme="dark"] .surah-header .surah-name {
+            color: var(--gold-color);
+        }
+
+        .surah-header .surah-meta {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .surah-header .bismillah {
+            font-family: var(--quran-font);
+            font-size: 1.8rem;
+            color: var(--gold-color);
+            margin: 0.3rem 0 0.5rem;
+            opacity: 0.8;
+        }
+
+        /* ===== أدوات التحكم ===== */
+        .controls-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            padding: 0.6rem 0.8rem;
+            background: var(--controls-bg);
+            border-radius: 60px;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .controls-bar .font-size-ctrl {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .controls-bar .font-size-ctrl button {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            border: 1px solid var(--btn-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            color: var(--btn-color);
+            background: var(--btn-bg);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .controls-bar .font-size-ctrl button:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .controls-bar .font-size-ctrl .size-display {
+            min-width: 40px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--btn-color);
+            font-weight: 600;
+        }
+
+        /* ===== حاوية القراءة ===== */
+        .reading-box {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 1.5rem 2rem 2rem;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid var(--border-line);
+            transition: all 0.4s ease;
+            min-height: 60vh;
+        }
+
+        /* ===== الآيات ===== */
+        .ayahs-container {
+            padding: 0.5rem 0;
+            text-align: center;
+        }
+
+        .ayah-line {
+            font-family: var(--quran-font);
+            font-size: var(--quran-size);
+            line-height: var(--line-height);
+            color: var(--text-main);
+            padding: 0.6rem 0.5rem;
+            border-bottom: 1px solid var(--border-line);
+            transition: all 0.3s ease;
+            text-align: center;
+            display: flex;
+            align-items: center;
+    flex-direction: column;            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .ayah-line:last-child {
+            border-bottom: none;
+        }
+
+        .ayah-end-mark {
+            font-family: var(--quran-font);
+            font-size: calc(var(--quran-size) * 0.5);
+            color: var(--gold-color);
+            font-weight: 700;
+            margin: 0 6px;
+            display: inline-block;
+        }
+
+        /* ===== رقم الآية (على الشمال بالأرقام العربية) ===== */
+        .ayah-number {
+            display: inline-block;
+            font-family: var(--quran-font);
+            font-size: calc(var(--quran-size) * 0.5);
+            color: var(--gold-color);
+            font-weight: 700;
+            margin-left: 10px;
+            background: rgba(184, 134, 11, 0.08);
+            padding: 0 8px;
+            border-radius: 6px;
+            line-height: 1.8;
+            order: -1;
+        }
+
+        /* ===== التنقل ===== */
+        .reading-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-line);
+            margin-top: 0.5rem;
+        }
+
+        .reading-nav .btn {
+            display: inline-block;
+            background: transparent;
+            color: var(--text-muted);
+            padding: 0.3rem 1.2rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            transition: all 0.3s;
+            border: 1px solid transparent;
+            cursor: pointer;
+        }
+
+        .reading-nav .btn:hover {
+            color: var(--text-main);
+            border-color: var(--border-line);
+        }
+
+        .reading-nav .btn-gold {
+            color: var(--gold-color);
+        }
+
+        .reading-nav .btn-gold:hover {
+            border-color: var(--gold-color);
+        }
+
+        .reading-nav .btn i {
+            margin: 0 4px;
+        }
+
+        /* ===== الفوتر ===== */
+        footer {
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2.5rem 0 1rem;
+            margin-top: 2rem;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        [data-theme="dark"] footer {
+            background: linear-gradient(to right, #0f0e17, #1a1a2e);
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        footer:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-column h3 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            position: relative;
+            padding-bottom: 0.4rem;
+        }
+
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 35px;
+            height: 2px;
+            background: var(--accent-color);
+        }
+
+        .footer-column p {
+            opacity: 0.8;
+            font-size: 0.85rem;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 0.4rem;
+        }
+
+        .footer-column ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            transition: all 0.3s;
+            display: block;
+            font-size: 0.85rem;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--accent-color);
+            transform: translateX(-3px);
+        }
+
+        .footer-column ul li a i {
+            margin-left: 6px;
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.75rem;
+            opacity: 0.7;
+        }
+
+        /* ===== استجابة ===== */
+        @media (max-width: 768px) {
+            .top-bar {
+                padding: 0.4rem 0.8rem;
+                border-radius: 10px;
+            }
+
+            .top-bar .logo-mobile {
+                font-size: 0.9rem;
+            }
+
+            .top-bar .menu-toggle {
+                width: 34px;
+                height: 34px;
+                font-size: 1.1rem;
+            }
+
+            .top-bar .right-group button {
+                width: 34px;
+                height: 34px;
+                font-size: 0.85rem;
+            }
+
+            .reading-box {
+                padding: 1rem 1rem 1.5rem;
+                border-radius: 12px;
+            }
+
+            .surah-header .surah-name {
+                font-size: 1.7rem;
+            }
+
+            .surah-header .bismillah {
+                font-size: 1.4rem;
+            }
+
+            :root {
+                --quran-size: 1.7rem;
+                --line-height: 2.4;
+            }
+
+            .controls-bar {
+                gap: 0.8rem;
+                padding: 0.4rem 0.8rem;
+            }
+
+            .controls-bar .font-size-ctrl button {
+                width: 30px;
+                height: 30px;
+            }
+
+            .ayah-line {
+                padding: 0.4rem 0.3rem;
+            }
+
+            .reading-nav {
+                gap: 0.8rem;
+            }
+
+            .reading-nav .btn {
+                padding: 0.2rem 0.8rem;
+                font-size: 0.75rem;
+            }
+
+            footer {
+                padding: 1.5rem 0 0.8rem;
+            }
+
+            .footer-content {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .top-bar {
+                padding: 0.3rem 0.6rem;
+                border-radius: 8px;
+            }
+
+            .top-bar .logo-mobile {
+                font-size: 0.8rem;
+            }
+
+            .top-bar .menu-toggle {
+                width: 30px;
+                height: 30px;
+                font-size: 1rem;
+            }
+
+            .top-bar .right-group button {
+                width: 30px;
+                height: 30px;
+                font-size: 0.75rem;
+            }
+
+            .reading-box {
+                padding: 0.8rem 0.6rem 1.2rem;
+                border-radius: 10px;
+            }
+
+            .surah-header .surah-name {
+                font-size: 1.4rem;
+            }
+
+            .surah-header .bismillah {
+                font-size: 1.2rem;
+            }
+
+            :root {
+                --quran-size: 1.3rem;
+                --line-height: 2.2;
+            }
+
+            .controls-bar .font-size-ctrl button {
+                width: 26px;
+                height: 26px;
+                font-size: 0.6rem;
+            }
+
+            .controls-bar .font-size-ctrl .size-display {
+                min-width: 30px;
+                font-size: 0.7rem;
+            }
+
+            .ayah-line {
+                padding: 0.3rem 0.2rem;
+            }
+
+            .reading-nav .btn {
+                padding: 0.15rem 0.6rem;
+                font-size: 0.65rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            :root {
+                --quran-size: 1.1rem;
+                --line-height: 2;
+            }
+
+            .surah-header .surah-name {
+                font-size: 1.2rem;
+            }
+
+            .surah-header .bismillah {
+                font-size: 1rem;
+            }
+
+            .reading-box {
+                padding: 0.5rem 0.4rem 1rem;
+            }
+        }
+    </style>
+
+    <link rel="manifest" href="../manifest.json">
+</head>
+
+<body>
+    <div class="app-wrapper">
+        <!-- ====== سايدبار ====== -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">طريق الجنة</div>
+            </div>
+            <nav class="sidebar-menu">
+                <ul>
+                    <li><a href="/index.html"><i class="fas fa-home"></i>الرئيسية</a></li>
+                    <li><a href="/index.html#learn"><i class="fas fa-graduation-cap"></i> تعلم الدين</a></li>
+                    <li><a href="/الاذكار.html"><i class="fas fa-pray"></i> أذكار وأدعية</a></li>
+                    <li class="active"><a href="/قراءة القرآن.html"><i class="fas fa-book-quran"></i> القرآن الكريم</a>
+                    </li>
+                    <li><a href="/اختبارات.html"><i class="fas fa-question-circle"></i> اختبارات تفاعلية</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- ====== المحتوى ====== -->
+        <main class="main-content">
+            <div class="container">
+                <!-- ====== توب بار ====== -->
+                <div class="top-bar">
+                    <div class="left-group">
+                        <button class="menu-toggle" id="menuToggle">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <div class="logo-mobile">طريق الجنة</div>
+                    </div>
+                    <div class="right-group">
+                        <button class="theme-toggle" id="darkModeToggle" title="الوضع الداكن">
+                            <i class="fas fa-moon theme-icon"></i>
+                        </button>
+                        <button id="fullscreenToggle" title="ملء الشاشة">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+
+                                <!-- ====== هيدر السورة ====== -->
+                <div class="surah-header">
+                    <div class="surah-name">سورة الصافات</div>
+                    <div class="surah-meta">مكية · 182 آية</div>
+                    <div class="bismillah">﴿ بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ ﴾</div>
+                </div>
+
+                <!-- ====== أدوات التحكم ====== -->
+                <div class="controls-bar">
+                    <div class="font-size-ctrl">
+                        <button id="fontDecrease" title="تصغير حجم الخط">أ-</button>
+                        <span class="size-display" id="fontSizeDisplay">2.2</span>
+                        <button id="fontIncrease" title="تكبير حجم الخط">أ+</button>
+                    </div>
+                </div>
+
+                <!-- ====== حاوية القراءة ====== -->
+                <div class="reading-box">
+                    <div class="ayahs-container" id="ayahsContainer">
+                        <!-- الآية 1 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١</span>
+                            وَالصَّافَّاتِ صَفًّا
+                        </div>
+                        <!-- الآية 2 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٢</span>
+                            فَالزَّاجِرَاتِ زَجْرًا
+                        </div>
+                        <!-- الآية 3 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٣</span>
+                            فَالتَّالِيَاتِ ذِكْرًا
+                        </div>
+                        <!-- الآية 4 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٤</span>
+                            إِنَّ إِلَٰهَكُمْ لَوَاحِدٌ
+                        </div>
+                        <!-- الآية 5 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٥</span>
+                            رَّبُّ السَّمَاوَاتِ وَالْأَرْضِ وَمَا بَيْنَهُمَا وَرَبُّ الْمَشَارِقِ
+                        </div>
+                        <!-- الآية 6 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٦</span>
+                            إِنَّا زَيَّنَّا السَّمَاءَ الدُّنْيَا بِزِينَةٍ الْكَوَاكِبِ
+                        </div>
+                        <!-- الآية 7 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٧</span>
+                            وَحِفْظًا مِّن كُلِّ شَيْطَانٍ مَّارِدٍ
+                        </div>
+                        <!-- الآية 8 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٨</span>
+                            لَّا يَسَّمَّعُونَ إِلَى الْمَلَإِ الْأَعْلَىٰ وَيُقْذَفُونَ مِن كُلِّ جَانِبٍ
+                        </div>
+                        <!-- الآية 9 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٩</span>
+                            دُحُورًا ۖ وَلَهُمْ عَذَابٌ وَاصِبٌ
+                        </div>
+                        <!-- الآية 10 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٠</span>
+                            إِلَّا مَنْ خَطِفَ الْخَطْفَةَ فَأَتْبَعَهُ شِهَابٌ ثَاقِبٌ
+                        </div>
+                        <!-- الآية 11 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١١</span>
+                            فَاسْتَفْتِهِمْ أَهُمْ أَشَدُّ خَلْقًا أَم مَّنْ خَلَقْنَا ۚ إِنَّا خَلَقْنَاهُم مِّن طِينٍ لَّازِبٍ
+                        </div>
+                        <!-- الآية 12 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٢</span>
+                            بَلْ عَجِبْتَ وَيَسْخَرُونَ
+                        </div>
+                        <!-- الآية 13 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٣</span>
+                            وَإِذَا ذُكِّرُوا لَا يَذْكُرُونَ
+                        </div>
+                        <!-- الآية 14 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٤</span>
+                            وَإِذَا رَأَوْا آيَةً يَسْتَسْخِرُونَ
+                        </div>
+                        <!-- الآية 15 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٥</span>
+                            وَقَالُوا إِنْ هَٰذَا إِلَّا سِحْرٌ مُّبِينٌ
+                        </div>
+                        <!-- الآية 16 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٦</span>
+                            أَإِذَا مِتْنَا وَكُنَّا تُرَابًا وَعِظَامًا أَإِنَّا لَمَبْعُوثُونَ
+                        </div>
+                        <!-- الآية 17 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٧</span>
+                            أَوَآبَاؤُنَا الْأَوَّلُونَ
+                        </div>
+                        <!-- الآية 18 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٨</span>
+                            قُلْ نَعَمْ وَأَنتُمْ دَاخِرُونَ
+                        </div>
+                        <!-- الآية 19 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٩</span>
+                            فَإِنَّمَا هِيَ زَجْرَةٌ وَاحِدَةٌ فَإِذَا هُمْ يَنظُرُونَ
+                        </div>
+                        <!-- الآية 20 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٢٠</span>
+                            وَقَالُوا يَا وَيْلَنَا هَٰذَا يَوْمُ الدِّينِ
+                        </div>
+                        <!-- الآية 21 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٢١</span>
+                            هَٰذَا يَوْمُ الْفَصْلِ الَّذِي كُنتُم بِهِ تُكَذِّبُونَ
+                        </div>
+                        <!-- الآية 22 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٢٢</span>
+                            ۞ احْشُرُوا الَّذِينَ ظَلَمُوا وَأَزْوَاجَهُمْ وَمَا كَانُوا يَعْبُدُونَ
+                        </div>
+                        <!-- الآية 23 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٢٣</span>
+                            مِن دُونِ اللَّهِ فَاهْدُوهُمْ إِلَىٰ صِرَاطِ الْجَحِيمِ
+                        </div>
+                        <!-- الآية 24 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٢٤</span>
+                            وَقِفُوهُمْ ۖ إِنَّهُم مَّسْئُولُونَ
+                        </div>
+                        <!-- الآية 25 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٢٥</span>
+                            مَا لَكُمْ لَا تَنَاصَرُونَ
+                        </div>
+                        <!-- الآية 26 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٢٦</span>
+                            بَلْ هُمُ الْيَوْمَ مُسْتَسْلِمُونَ
+                        </div>
+                        <!-- الآية 27 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٢٧</span>
+                            وَأَقْبَلَ بَعْضُهُمْ عَلَىٰ بَعْضٍ يَتَسَاءَلُونَ
+                        </div>
+                        <!-- الآية 28 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٢٨</span>
+                            قَالُوا إِنَّكُمْ كُنتُمْ تَأْتُونَنَا عَنِ الْيَمِينِ
+                        </div>
+                        <!-- الآية 29 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٢٩</span>
+                            قَالُوا بَل لَّمْ تَكُونُوا مُؤْمِنِينَ
+                        </div>
+                        <!-- الآية 30 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٣٠</span>
+                            وَمَا كَانَ لَنَا عَلَيْكُم مِّن سُلْطَانٍ ۖ بَلْ كُنتُمْ قَوْمًا طَاغِينَ
+                        </div>
+                        <!-- الآية 31 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٣١</span>
+                            فَحَقَّ عَلَيْنَا قَوْلُ رَبِّنَا ۖ إِنَّا لَذَائِقُونَ
+                        </div>
+                        <!-- الآية 32 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٣٢</span>
+                            فَأَغْوَيْنَاكُمْ إِنَّا كُنَّا غَاوِينَ
+                        </div>
+                        <!-- الآية 33 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٣٣</span>
+                            فَإِنَّهُمْ يَوْمَئِذٍ فِي الْعَذَابِ مُشْتَرِكُونَ
+                        </div>
+                        <!-- الآية 34 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٣٤</span>
+                            إِنَّا كَذَٰلِكَ نَفْعَلُ بِالْمُجْرِمِينَ
+                        </div>
+                        <!-- الآية 35 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٣٥</span>
+                            إِنَّهُمْ كَانُوا إِذَا قِيلَ لَهُمْ لَا إِلَٰهَ إِلَّا اللَّهُ يَسْتَكْبِرُونَ
+                        </div>
+                        <!-- الآية 36 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٣٦</span>
+                            وَيَقُولُونَ أَئِنَّا لَتَارِكُو آلِهَتِنَا لِشَاعِرٍ مَّجْنُونٍ
+                        </div>
+                        <!-- الآية 37 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٣٧</span>
+                            بَلْ جَاءَ بِالْحَقِّ وَصَدَّقَ الْمُرْسَلِينَ
+                        </div>
+                        <!-- الآية 38 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٣٨</span>
+                            إِنَّكُمْ لَذَائِقُو الْعَذَابِ الْأَلِيمِ
+                        </div>
+                        <!-- الآية 39 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٣٩</span>
+                            وَمَا تُجْزَوْنَ إِلَّا مَا كُنتُمْ تَعْمَلُونَ
+                        </div>
+                        <!-- الآية 40 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٤٠</span>
+                            إِلَّا عِبَادَ اللَّهِ الْمُخْلَصِينَ
+                        </div>
+                        <!-- الآية 41 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٤١</span>
+                            أُولَٰئِكَ لَهُمْ رِزْقٌ مَّعْلُومٌ
+                        </div>
+                        <!-- الآية 42 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٤٢</span>
+                            فَوَاكِهُ ۖ وَهُم مُّكْرَمُونَ
+                        </div>
+                        <!-- الآية 43 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٤٣</span>
+                            فِي جَنَّاتِ النَّعِيمِ
+                        </div>
+                        <!-- الآية 44 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٤٤</span>
+                            عَلَىٰ سُرُرٍ مُّتَقَابِلِينَ
+                        </div>
+                        <!-- الآية 45 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٤٥</span>
+                            يُطَافُ عَلَيْهِم بِكَأْسٍ مِّن مَّعِينٍ
+                        </div>
+                        <!-- الآية 46 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٤٦</span>
+                            بَيْضَاءَ لَذَّةٍ لِّلشَّارِبِينَ
+                        </div>
+                        <!-- الآية 47 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٤٧</span>
+                            لَا فِيهَا غَوْلٌ وَلَا هُمْ عَنْهَا يُنزَفُونَ
+                        </div>
+                        <!-- الآية 48 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٤٨</span>
+                            وَعِندَهُمْ قَاصِرَاتُ الطَّرْفِ عِينٌ
+                        </div>
+                        <!-- الآية 49 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٤٩</span>
+                            كَأَنَّهُنَّ بَيْضٌ مَّكْنُونٌ
+                        </div>
+                        <!-- الآية 50 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٥٠</span>
+                            فَأَقْبَلَ بَعْضُهُمْ عَلَىٰ بَعْضٍ يَتَسَاءَلُونَ
+                        </div>
+                        <!-- الآية 51 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٥١</span>
+                            قَالَ قَائِلٌ مِّنْهُمْ إِنِّي كَانَ لِي قَرِينٌ
+                        </div>
+                        <!-- الآية 52 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٥٢</span>
+                            يَقُولُ أَإِنَّكَ لَمِنَ الْمُصَدِّقِينَ
+                        </div>
+                        <!-- الآية 53 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٥٣</span>
+                            أَإِذَا مِتْنَا وَكُنَّا تُرَابًا وَعِظَامًا أَإِنَّا لَمَدِينُونَ
+                        </div>
+                        <!-- الآية 54 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٥٤</span>
+                            قَالَ هَلْ أَنتُم مُّطَّلِعُونَ
+                        </div>
+                        <!-- الآية 55 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٥٥</span>
+                            فَاطَّلَعَ فَرَآهُ فِي سَوَاءِ الْجَحِيمِ
+                        </div>
+                        <!-- الآية 56 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٥٦</span>
+                            قَالَ تَاللَّهِ إِن كِدتَّ لَتُرْدِينِ
+                        </div>
+                        <!-- الآية 57 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٥٧</span>
+                            وَلَوْلَا نِعْمَةُ رَبِّي لَكُنتُ مِنَ الْمُحْضَرِينَ
+                        </div>
+                        <!-- الآية 58 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٥٨</span>
+                            أَفَمَا نَحْنُ بِمَيِّتِينَ
+                        </div>
+                        <!-- الآية 59 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٥٩</span>
+                            إِلَّا مَوْتَتَنَا الْأُولَىٰ وَمَا نَحْنُ بِمُعَذَّبِينَ
+                        </div>
+                        <!-- الآية 60 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٦٠</span>
+                            إِنَّ هَٰذَا لَهُوَ الْفَوْزُ الْعَظِيمُ
+                        </div>
+                        <!-- الآية 61 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٦١</span>
+                            لِمِثْلِ هَٰذَا فَلْيَعْمَلِ الْعَامِلُونَ
+                        </div>
+                        <!-- الآية 62 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٦٢</span>
+                            أَذَٰلِكَ خَيْرٌ نُّزُلًا أَمْ شَجَرَةُ الزَّقُّومِ
+                        </div>
+                        <!-- الآية 63 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٦٣</span>
+                            إِنَّا جَعَلْنَاهَا فِتْنَةً لِّلظَّالِمِينَ
+                        </div>
+                        <!-- الآية 64 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٦٤</span>
+                            إِنَّهَا شَجَرَةٌ تَخْرُجُ فِي أَصْلِ الْجَحِيمِ
+                        </div>
+                        <!-- الآية 65 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٦٥</span>
+                            طَلْعُهَا كَأَنَّهُ رُءُوسُ الشَّيَاطِينِ
+                        </div>
+                        <!-- الآية 66 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٦٦</span>
+                            فَإِنَّهُمْ لَآكِلُونَ مِنْهَا فَمَالِئُونَ مِنْهَا الْبُطُونَ
+                        </div>
+                        <!-- الآية 67 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٦٧</span>
+                            ثُمَّ إِنَّ لَهُمْ عَلَيْهَا لَشَوْبًا مِّنْ حَمِيمٍ
+                        </div>
+                        <!-- الآية 68 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٦٨</span>
+                            ثُمَّ إِنَّ مَرْجِعَهُمْ لَإِلَى الْجَحِيمِ
+                        </div>
+                        <!-- الآية 69 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٦٩</span>
+                            إِنَّهُمْ أَلْفَوْا آبَاءَهُمْ ضَالِّينَ
+                        </div>
+                        <!-- الآية 70 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٧٠</span>
+                            فَهُمْ عَلَىٰ آثَارِهِمْ يُهْرَعُونَ
+                        </div>
+                        <!-- الآية 71 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٧١</span>
+                            وَلَقَدْ ضَلَّ قَبْلَهُمْ أَكْثَرُ الْأَوَّلِينَ
+                        </div>
+                        <!-- الآية 72 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٧٢</span>
+                            وَلَقَدْ أَرْسَلْنَا فِيهِم مُّنذِرِينَ
+                        </div>
+                        <!-- الآية 73 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٧٣</span>
+                            فَانظُرْ كَيْفَ كَانَ عَاقِبَةُ الْمُنذَرِينَ
+                        </div>
+                        <!-- الآية 74 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٧٤</span>
+                            إِلَّا عِبَادَ اللَّهِ الْمُخْلَصِينَ
+                        </div>
+                        <!-- الآية 75 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٧٥</span>
+                            وَلَقَدْ نَادَانَا نُوحٌ فَلَنِعْمَ الْمُجِيبُونَ
+                        </div>
+                        <!-- الآية 76 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٧٦</span>
+                            وَنَجَّيْنَاهُ وَأَهْلَهُ مِنَ الْكَرْبِ الْعَظِيمِ
+                        </div>
+                        <!-- الآية 77 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٧٧</span>
+                            وَجَعَلْنَا ذُرِّيَّتَهُ هُمُ الْبَاقِينَ
+                        </div>
+                        <!-- الآية 78 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٧٨</span>
+                            وَتَرَكْنَا عَلَيْهِ فِي الْآخِرِينَ
+                        </div>
+                        <!-- الآية 79 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٧٩</span>
+                            سَلَامٌ عَلَىٰ نُوحٍ فِي الْعَالَمِينَ
+                        </div>
+                        <!-- الآية 80 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٨٠</span>
+                            إِنَّا كَذَٰلِكَ نَجْزِي الْمُحْسِنِينَ
+                        </div>
+                        <!-- الآية 81 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٨١</span>
+                            إِنَّهُ مِنْ عِبَادِنَا الْمُؤْمِنِينَ
+                        </div>
+                        <!-- الآية 82 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٨٢</span>
+                            ثُمَّ أَغْرَقْنَا الْآخَرِينَ
+                        </div>
+                        <!-- الآية 83 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٨٣</span>
+                            ۞ وَإِنَّ مِن شِيعَتِهِ لَإِبْرَاهِيمَ
+                        </div>
+                        <!-- الآية 84 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٨٤</span>
+                            إِذْ جَاءَ رَبَّهُ بِقَلْبٍ سَلِيمٍ
+                        </div>
+                        <!-- الآية 85 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٨٥</span>
+                            إِذْ قَالَ لِأَبِيهِ وَقَوْمِهِ مَاذَا تَعْبُدُونَ
+                        </div>
+                        <!-- الآية 86 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٨٦</span>
+                            أَئِفْكًا آلِهَةً دُونَ اللَّهِ تُرِيدُونَ
+                        </div>
+                        <!-- الآية 87 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٨٧</span>
+                            فَمَا ظَنُّكُم بِرَبِّ الْعَالَمِينَ
+                        </div>
+                        <!-- الآية 88 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٨٨</span>
+                            فَنَظَرَ نَظْرَةً فِي النُّجُومِ
+                        </div>
+                        <!-- الآية 89 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٨٩</span>
+                            فَقَالَ إِنِّي سَقِيمٌ
+                        </div>
+                        <!-- الآية 90 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٩٠</span>
+                            فَتَوَلَّوْا عَنْهُ مُدْبِرِينَ
+                        </div>
+                        <!-- الآية 91 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٩١</span>
+                            فَرَاغَ إِلَىٰ آلِهَتِهِمْ فَقَالَ أَلَا تَأْكُلُونَ
+                        </div>
+                        <!-- الآية 92 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٩٢</span>
+                            مَا لَكُمْ لَا تَنطِقُونَ
+                        </div>
+                        <!-- الآية 93 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٩٣</span>
+                            فَرَاغَ عَلَيْهِمْ ضَرْبًا بِالْيَمِينِ
+                        </div>
+                        <!-- الآية 94 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٩٤</span>
+                            فَأَقْبَلُوا إِلَيْهِ يَزِفُّونَ
+                        </div>
+                        <!-- الآية 95 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٩٥</span>
+                            قَالَ أَتَعْبُدُونَ مَا تَنْحِتُونَ
+                        </div>
+                        <!-- الآية 96 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٩٦</span>
+                            وَاللَّهُ خَلَقَكُمْ وَمَا تَعْمَلُونَ
+                        </div>
+                        <!-- الآية 97 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٩٧</span>
+                            قَالُوا ابْنُوا لَهُ بُنْيَانًا فَأَلْقُوهُ فِي الْجَحِيمِ
+                        </div>
+                        <!-- الآية 98 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٩٨</span>
+                            فَأَرَادُوا بِهِ كَيْدًا فَجَعَلْنَاهُمُ الْأَسْفَلِينَ
+                        </div>
+                        <!-- الآية 99 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">٩٩</span>
+                            وَقَالَ إِنِّي ذَاهِبٌ إِلَىٰ رَبِّي سَيَهْدِينِ
+                        </div>
+                        <!-- الآية 100 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٠٠</span>
+                            رَبِّ هَبْ لِي مِنَ الصَّالِحِينَ
+                        </div>
+                        <!-- الآية 101 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٠١</span>
+                            فَبَشَّرْنَاهُ بِغُلَامٍ حَلِيمٍ
+                        </div>
+                        <!-- الآية 102 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٠٢</span>
+                            فَلَمَّا بَلَغَ مَعَهُ السَّعْيَ قَالَ يَا بُنَيَّ إِنِّي أَرَىٰ فِي الْمَنَامِ أَنِّي أَذْبَحُكَ فَانظُرْ مَاذَا تَرَىٰ ۚ قَالَ يَا أَبَتِ افْعَلْ مَا تُؤْمَرُ ۖ سَتَجِدُنِي إِن شَاءَ اللَّهُ مِنَ الصَّابِرِينَ
+                        </div>
+                        <!-- الآية 103 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٠٣</span>
+                            فَلَمَّا أَسْلَمَا وَتَلَّهُ لِلْجَبِينِ
+                        </div>
+                        <!-- الآية 104 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٠٤</span>
+                            وَنَادَيْنَاهُ أَن يَا إِبْرَاهِيمُ
+                        </div>
+                        <!-- الآية 105 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٠٥</span>
+                            قَدْ صَدَّقْتَ الرُّؤْيَا ۚ إِنَّا كَذَٰلِكَ نَجْزِي الْمُحْسِنِينَ
+                        </div>
+                        <!-- الآية 106 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٠٦</span>
+                            إِنَّ هَٰذَا لَهُوَ الْبَلَاءُ الْمُبِينُ
+                        </div>
+                        <!-- الآية 107 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٠٧</span>
+                            وَفَدَيْنَاهُ بِذِبْحٍ عَظِيمٍ
+                        </div>
+                        <!-- الآية 108 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٠٨</span>
+                            وَتَرَكْنَا عَلَيْهِ فِي الْآخِرِينَ
+                        </div>
+                        <!-- الآية 109 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٠٩</span>
+                            سَلَامٌ عَلَىٰ إِبْرَاهِيمَ
+                        </div>
+                        <!-- الآية 110 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١١٠</span>
+                            كَذَٰلِكَ نَجْزِي الْمُحْسِنِينَ
+                        </div>
+                        <!-- الآية 111 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١١١</span>
+                            إِنَّهُ مِنْ عِبَادِنَا الْمُؤْمِنِينَ
+                        </div>
+                        <!-- الآية 112 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١١٢</span>
+                            وَبَشَّرْنَاهُ بِإِسْحَاقَ نَبِيًّا مِّنَ الصَّالِحِينَ
+                        </div>
+                        <!-- الآية 113 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١١٣</span>
+                            وَبَارَكْنَا عَلَيْهِ وَعَلَىٰ إِسْحَاقَ ۚ وَمِن ذُرِّيَّتِهِمَا مُحْسِنٌ وَظَالِمٌ لِّنَفْسِهِ مُبِينٌ
+                        </div>
+                        <!-- الآية 114 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١١٤</span>
+                            وَلَقَدْ مَنَنَّا عَلَىٰ مُوسَىٰ وَهَارُونَ
+                        </div>
+                        <!-- الآية 115 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١١٥</span>
+                            وَنَجَّيْنَاهُمَا وَقَوْمَهُمَا مِنَ الْكَرْبِ الْعَظِيمِ
+                        </div>
+                        <!-- الآية 116 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١١٦</span>
+                            وَنَصَرْنَاهُمْ فَكَانُوا هُمُ الْغَالِبِينَ
+                        </div>
+                        <!-- الآية 117 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١١٧</span>
+                            وَآتَيْنَاهُمَا الْكِتَابَ الْمُسْتَبِينَ
+                        </div>
+                        <!-- الآية 118 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١١٨</span>
+                            وَهَدَيْنَاهُمَا الصِّرَاطَ الْمُسْتَقِيمَ
+                        </div>
+                        <!-- الآية 119 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١١٩</span>
+                            وَتَرَكْنَا عَلَيْهِمَا فِي الْآخِرِينَ
+                        </div>
+                        <!-- الآية 120 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٢٠</span>
+                            سَلَامٌ عَلَىٰ مُوسَىٰ وَهَارُونَ
+                        </div>
+                        <!-- الآية 121 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٢١</span>
+                            إِنَّا كَذَٰلِكَ نَجْزِي الْمُحْسِنِينَ
+                        </div>
+                        <!-- الآية 122 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٢٢</span>
+                            إِنَّهُمَا مِنْ عِبَادِنَا الْمُؤْمِنِينَ
+                        </div>
+                        <!-- الآية 123 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٢٣</span>
+                            وَإِنَّ إِلْيَاسَ لَمِنَ الْمُرْسَلِينَ
+                        </div>
+                        <!-- الآية 124 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٢٤</span>
+                            إِذْ قَالَ لِقَوْمِهِ أَلَا تَتَّقُونَ
+                        </div>
+                        <!-- الآية 125 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٢٥</span>
+                            أَتَدْعُونَ بَعْلًا وَتَذَرُونَ أَحْسَنَ الْخَالِقِينَ
+                        </div>
+                        <!-- الآية 126 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٢٦</span>
+                            اللَّهَ رَبَّكُمْ وَرَبَّ آبَائِكُمُ الْأَوَّلِينَ
+                        </div>
+                        <!-- الآية 127 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٢٧</span>
+                            فَكَذَّبُوهُ فَإِنَّهُمْ لَمُحْضَرُونَ
+                        </div>
+                        <!-- الآية 128 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٢٨</span>
+                            إِلَّا عِبَادَ اللَّهِ الْمُخْلَصِينَ
+                        </div>
+                        <!-- الآية 129 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٢٩</span>
+                            وَتَرَكْنَا عَلَيْهِ فِي الْآخِرِينَ
+                        </div>
+                        <!-- الآية 130 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٣٠</span>
+                            سَلَامٌ عَلَىٰ إِلْ يَاسِينَ
+                        </div>
+                        <!-- الآية 131 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٣١</span>
+                            إِنَّا كَذَٰلِكَ نَجْزِي الْمُحْسِنِينَ
+                        </div>
+                        <!-- الآية 132 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٣٢</span>
+                            إِنَّهُ مِنْ عِبَادِنَا الْمُؤْمِنِينَ
+                        </div>
+                        <!-- الآية 133 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٣٣</span>
+                            وَإِنَّ لُوطًا لَّمِنَ الْمُرْسَلِينَ
+                        </div>
+                        <!-- الآية 134 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٣٤</span>
+                            إِذْ نَجَّيْنَاهُ وَأَهْلَهُ أَجْمَعِينَ
+                        </div>
+                        <!-- الآية 135 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٣٥</span>
+                            إِلَّا عَجُوزًا فِي الْغَابِرِينَ
+                        </div>
+                        <!-- الآية 136 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٣٦</span>
+                            ثُمَّ دَمَّرْنَا الْآخَرِينَ
+                        </div>
+                        <!-- الآية 137 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٣٧</span>
+                            وَإِنَّكُمْ لَتَمُرُّونَ عَلَيْهِم مُّصْبِحِينَ
+                        </div>
+                        <!-- الآية 138 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٣٨</span>
+                            وَبِاللَّيْلِ ۗ أَفَلَا تَعْقِلُونَ
+                        </div>
+                        <!-- الآية 139 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٣٩</span>
+                            وَإِنَّ يُونُسَ لَمِنَ الْمُرْسَلِينَ
+                        </div>
+                        <!-- الآية 140 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٤٠</span>
+                            إِذْ أَبَقَ إِلَى الْفُلْكِ الْمَشْحُونِ
+                        </div>
+                        <!-- الآية 141 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٤١</span>
+                            فَسَاهَمَ فَكَانَ مِنَ الْمُدْحَضِينَ
+                        </div>
+                        <!-- الآية 142 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٤٢</span>
+                            فَالْتَقَمَهُ الْحُوتُ وَهُوَ مُلِيمٌ
+                        </div>
+                        <!-- الآية 143 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٤٣</span>
+                            فَلَوْلَا أَنَّهُ كَانَ مِنَ الْمُسَبِّحِينَ
+                        </div>
+                        <!-- الآية 144 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٤٤</span>
+                            لَلَبِثَ فِي بَطْنِهِ إِلَىٰ يَوْمِ يُبْعَثُونَ
+                        </div>
+                        <!-- الآية 145 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٤٥</span>
+                            ۞ فَنَبَذْنَاهُ بِالْعَرَاءِ وَهُوَ سَقِيمٌ
+                        </div>
+                        <!-- الآية 146 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٤٦</span>
+                            وَأَنبَتْنَا عَلَيْهِ شَجَرَةً مِّن يَقْطِينٍ
+                        </div>
+                        <!-- الآية 147 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٤٧</span>
+                            وَأَرْسَلْنَاهُ إِلَىٰ مِائَةِ أَلْفٍ أَوْ يَزِيدُونَ
+                        </div>
+                        <!-- الآية 148 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٤٨</span>
+                            فَآمَنُوا فَمَتَّعْنَاهُمْ إِلَىٰ حِينٍ
+                        </div>
+                        <!-- الآية 149 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٤٩</span>
+                            فَاسْتَفْتِهِمْ أَلِرَبِّكَ الْبَنَاتُ وَلَهُمُ الْبَنُونَ
+                        </div>
+                        <!-- الآية 150 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٥٠</span>
+                            أَمْ خَلَقْنَا الْمَلَائِكَةَ إِنَاثًا وَهُمْ شَاهِدُونَ
+                        </div>
+                        <!-- الآية 151 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٥١</span>
+                            أَلَا إِنَّهُم مِّنْ إِفْكِهِمْ لَيَقُولُونَ
+                        </div>
+                        <!-- الآية 152 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٥٢</span>
+                            وَلَدَ اللَّهُ وَإِنَّهُمْ لَكَاذِبُونَ
+                        </div>
+                        <!-- الآية 153 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٥٣</span>
+                            أَصْطَفَى الْبَنَاتِ عَلَى الْبَنِينَ
+                        </div>
+                        <!-- الآية 154 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٥٤</span>
+                            مَا لَكُمْ كَيْفَ تَحْكُمُونَ
+                        </div>
+                        <!-- الآية 155 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٥٥</span>
+                            أَفَلَا تَذَكَّرُونَ
+                        </div>
+                        <!-- الآية 156 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٥٦</span>
+                            أَمْ لَكُمْ سُلْطَانٌ مُّبِينٌ
+                        </div>
+                        <!-- الآية 157 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٥٧</span>
+                            فَأْتُوا بِكِتَابِكُمْ إِن كُنتُمْ صَادِقِينَ
+                        </div>
+                        <!-- الآية 158 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٥٨</span>
+                            وَجَعَلُوا بَيْنَهُ وَبَيْنَ الْجِنَّةِ نَسَبًا ۚ وَلَقَدْ عَلِمَتِ الْجِنَّةُ إِنَّهُمْ لَمُحْضَرُونَ
+                        </div>
+                        <!-- الآية 159 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٥٩</span>
+                            سُبْحَانَ اللَّهِ عَمَّا يَصِفُونَ
+                        </div>
+                        <!-- الآية 160 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٦٠</span>
+                            إِلَّا عِبَادَ اللَّهِ الْمُخْلَصِينَ
+                        </div>
+                        <!-- الآية 161 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٦١</span>
+                            فَإِنَّكُمْ وَمَا تَعْبُدُونَ
+                        </div>
+                        <!-- الآية 162 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٦٢</span>
+                            مَا أَنتُمْ عَلَيْهِ بِفَاتِنِينَ
+                        </div>
+                        <!-- الآية 163 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٦٣</span>
+                            إِلَّا مَنْ هُوَ صَالِ الْجَحِيمِ
+                        </div>
+                        <!-- الآية 164 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٦٤</span>
+                            وَمَا مِنَّا إِلَّا لَهُ مَقَامٌ مَّعْلُومٌ
+                        </div>
+                        <!-- الآية 165 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٦٥</span>
+                            وَإِنَّا لَنَحْنُ الصَّافُّونَ
+                        </div>
+                        <!-- الآية 166 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٦٦</span>
+                            وَإِنَّا لَنَحْنُ الْمُسَبِّحُونَ
+                        </div>
+                        <!-- الآية 167 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٦٧</span>
+                            وَإِن كَانُوا لَيَقُولُونَ
+                        </div>
+                        <!-- الآية 168 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٦٨</span>
+                            لَوْ أَنَّ عِندَنَا ذِكْرًا مِّنَ الْأَوَّلِينَ
+                        </div>
+                        <!-- الآية 169 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٦٩</span>
+                            لَكُنَّا عِبَادَ اللَّهِ الْمُخْلَصِينَ
+                        </div>
+                        <!-- الآية 170 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٧٠</span>
+                            فَكَفَرُوا بِهِ ۖ فَسَوْفَ يَعْلَمُونَ
+                        </div>
+                        <!-- الآية 171 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٧١</span>
+                            وَلَقَدْ سَبَقَتْ كَلِمَتُنَا لِعِبَادِنَا الْمُرْسَلِينَ
+                        </div>
+                        <!-- الآية 172 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٧٢</span>
+                            إِنَّهُمْ لَهُمُ الْمَنصُورُونَ
+                        </div>
+                        <!-- الآية 173 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٧٣</span>
+                            وَإِنَّ جُندَنَا لَهُمُ الْغَالِبُونَ
+                        </div>
+                        <!-- الآية 174 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٧٤</span>
+                            فَتَوَلَّ عَنْهُمْ حَتَّىٰ حِينٍ
+                        </div>
+                        <!-- الآية 175 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٧٥</span>
+                            وَأَبْصِرْهُمْ فَسَوْفَ يُبْصِرُونَ
+                        </div>
+                        <!-- الآية 176 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٧٦</span>
+                            أَفَبِعَذَابِنَا يَسْتَعْجِلُونَ
+                        </div>
+                        <!-- الآية 177 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٧٧</span>
+                            فَإِذَا نَزَلَ بِسَاحَتِهِمْ فَسَاءَ صَبَاحُ الْمُنذَرِينَ
+                        </div>
+                        <!-- الآية 178 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٧٨</span>
+                            وَتَوَلَّ عَنْهُمْ حَتَّىٰ حِينٍ
+                        </div>
+                        <!-- الآية 179 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٧٩</span>
+                            وَأَبْصِرْ فَسَوْفَ يُبْصِرُونَ
+                        </div>
+                        <!-- الآية 180 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٨٠</span>
+                            سُبْحَانَ رَبِّكَ رَبِّ الْعِزَّةِ عَمَّا يَصِفُونَ
+                        </div>
+                        <!-- الآية 181 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٨١</span>
+                            وَسَلَامٌ عَلَى الْمُرْسَلِينَ
+                        </div>
+                        <!-- الآية 182 -->
+                        <div class="ayah-line">
+                            <span class="ayah-number">١٨٢</span>
+                            وَالْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ
+                        </div>
+                    </div>
+
+                                        <!-- ====== التنقل ====== -->
+                    <div class="reading-nav">
+                        <a href="يس.html" class="btn"><i class="fas fa-arrow-right"></i> السابق</a>
+                        <a href="/قراءة القرآن.html" class="btn btn-gold"><i class="fas fa-list-ul"></i> قائمة السور</a>
+                        <a href="ص.html" class="btn">التالي <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ====== الفوتر ====== -->
+            <footer>
+                <div class="container">
+                    <div class="footer-content">
+                        <div class="footer-column">
+                            <h3>عن طريق الجنة</h3>
+                            <p>منصة إسلامية شاملة تهدف إلى تقديم محتوى تعليمي متميز في الدين الإسلامي بطرق تفاعلية
+                                حديثة.</p>
+                        </div>
+                        <div class="footer-column">
+                            <h3>روابط</h3>
+                            <ul>
+                                <li><a href="/index.html"><i class="fas fa-home"></i>الرئيسية</a></li>
+                                <li><a href="/index.html#learn"><i class="fas fa-graduation-cap"></i> تعلم الدين</a>
+                                </li>
+                                <li><a href="/الاذكار.html"><i class="fas fa-pray"></i> أذكار وأدعية</a></li>
+                                <li><a href="/قراءة القرآن.html"><i class="fas fa-book-quran"></i> القرآن الكريم</a>
+                                </li>
+                                <li><a href="/اختبارات.html"><i class="fas fa-question-circle"></i> اختبارات تفاعلية</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="copyright">© <script>document.write(new Date().getFullYear())</script> طريق الجنة - جميع الحقوق محفوظة</div>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script>
+        // ====== السايدبار ======
+        const sidebar = document.getElementById('sidebar');
+        const menuToggle = document.getElementById('menuToggle');
+        menuToggle.addEventListener('click', () => sidebar.classList.toggle('active'));
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !menuToggle.contains(e.target)) {
+                sidebar.classList.remove('active');
+            }
+        });
+
+        // ====== Dark Mode مع أنيميشن ======
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        let isDarkMode = localStorage.getItem('quranDarkMode') === 'true';
+        const themeIcon = darkModeToggle.querySelector('.theme-icon');
+
+        if (isDarkMode) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            themeIcon.className = 'fas fa-sun theme-icon';
+        }
+
+        darkModeToggle.addEventListener('click', function (e) {
+            // تأثير التموج (Ripple)
+            const ripple = document.createElement('span');
+            ripple.className = 'ripple-effect';
+            const rect = this.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            ripple.style.width = ripple.style.height = size + 'px';
+            ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
+            ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
+            this.appendChild(ripple);
+            setTimeout(() => ripple.remove(), 600);
+
+            isDarkMode = !isDarkMode;
+            localStorage.setItem('quranDarkMode', isDarkMode);
+            if (isDarkMode) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                themeIcon.className = 'fas fa-sun theme-icon';
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+                themeIcon.className = 'fas fa-moon theme-icon';
+            }
+        });
+
+        // ====== Fullscreen ======
+        const fullscreenToggle = document.getElementById('fullscreenToggle');
+        fullscreenToggle.addEventListener('click', () => {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen();
+                fullscreenToggle.innerHTML = '<i class="fas fa-compress"></i>';
+            } else {
+                document.exitFullscreen();
+                fullscreenToggle.innerHTML = '<i class="fas fa-expand"></i>';
+            }
+        });
+
+        document.addEventListener('fullscreenchange', () => {
+            if (!document.fullscreenElement) {
+                fullscreenToggle.innerHTML = '<i class="fas fa-expand"></i>';
+            }
+        });
+
+        // ====== حجم الخط ======
+        let currentFontSize = 2.2;
+        const minSize = 0.8;
+        const maxSize = 4.5;
+        const fontSizeDisplay = document.getElementById('fontSizeDisplay');
+
+        document.getElementById('fontIncrease').addEventListener('click', () => {
+            if (currentFontSize < maxSize) {
+                currentFontSize += 0.1;
+                updateFontSize();
+            }
+        });
+
+        document.getElementById('fontDecrease').addEventListener('click', () => {
+            if (currentFontSize > minSize) {
+                currentFontSize -= 0.1;
+                updateFontSize();
+            }
+        });
+
+        function updateFontSize() {
+            document.documentElement.style.setProperty('--quran-size', currentFontSize + 'rem');
+            fontSizeDisplay.textContent = currentFontSize.toFixed(1);
+        }
+
+        // ====== منع النقر على الروابط التجريبية ======
+        document.querySelectorAll('.reading-nav .btn').forEach(btn => {
+            btn.addEventListener('click', function (e) {
+                if (this.getAttribute('href') === '#') {
+                    e.preventDefault();
+                }
+            });
+        });
+    </script>
+
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('../sw.js', { scope: '../' })
+                .then(registration => {
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                })
+                .catch(err => {
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+        });
+    }
+</script>
+</body>
+
+</html>

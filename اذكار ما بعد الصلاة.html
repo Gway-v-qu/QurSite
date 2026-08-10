@@ -1,0 +1,1587 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طريق الجنة - أذكار ما بعد الصلاة التفاعلية</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="طريق الجنة - أذكار ما بعد الصلاة التفاعلية - طريق الجنة: المنصة الذكية لتعليم الدين الإسلامي، القرآن الكريم، الأذكار، والاختبارات الدينية.">
+    <meta name="keywords" content="طريق الجنة, إسلام, قرآن كريم, أذكار, أدعية, تعليم الدين, طريق الجنة - أذكار ما بعد الصلاة التفاعلية">
+    <meta name="author" content="طريق الجنة">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#1a5f7a">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="طريق الجنة - أذكار ما بعد الصلاة التفاعلية">
+    <meta property="og:description" content="طريق الجنة - أذكار ما بعد الصلاة التفاعلية - طريق الجنة: المنصة الذكية لتعليم الدين الإسلامي.">
+    <meta property="og:image" content="/Logo.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="طريق الجنة - أذكار ما بعد الصلاة التفاعلية">
+    <meta name="twitter:description" content="طريق الجنة - أذكار ما بعد الصلاة التفاعلية - طريق الجنة: المنصة الذكية لتعليم الدين الإسلامي.">
+    <meta name="twitter:image" content="/Logo.png">
+
+    <link rel="shortcut icon" href="Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="Font Awesome/fontawesome-free-7.2.0-web/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #57c5b6;
+            --light-color: #f9f9f9;
+            --dark-color: #002b5b;
+            --text-color: #333;
+            --gold-color: #b8860b;
+            --success-color: #28a745;
+            --easy-color: #4caf50;
+            --medium-color: #ff9800;
+            --hard-color: #f44336;
+            --sidebar-width: 280px;
+        }
+
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', sans-serif;
+        }
+        
+        body {
+            background-color: var(--light-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            overflow-x: hidden;
+            background-image: url('https://www.transparenttextures.com/patterns/arabesque.png');
+            background-attachment: fixed;
+        }
+        
+        .container {
+            width: 95%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* التصميم العام */
+        .app-wrapper {
+            display: flex;
+            min-height: 100vh;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        /* الشريط الجانبي - دائماً برجر */
+        .sidebar {
+            position: fixed;
+            right: -280px;
+            top: 0;
+            width: var(--sidebar-width);
+            height: 100vh;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            overflow-y: auto;
+            transition: all 0.3s ease;
+            border-left: 3px solid var(--accent-color);
+        }
+        
+        .sidebar.active {
+            right: 0;
+        }
+        
+        .sidebar-header {
+            padding: 1.5rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            background-color: rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .sidebar-header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        
+        .sidebar-menu {
+            padding: 1rem 0;
+        }
+        
+        .sidebar-menu ul {
+            list-style: none;
+        }
+        
+        .sidebar-menu ul li a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 1.5rem;
+            transition: all 0.3s;
+            position: relative;
+            font-size: 1rem;
+        }
+        
+        .sidebar-menu ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--accent-color);
+        }
+        
+        .sidebar-menu ul li a i {
+            margin-left: 10px;
+            width: 20px;
+            text-align: center;
+        }
+        
+        .sidebar-menu ul li.active a {
+            background-color: rgba(255, 255, 255, 0.15);
+            color: var(--accent-color);
+            border-right: 3px solid var(--accent-color);
+        }
+        
+        .sidebar-footer {
+            padding: 1rem;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: auto;
+        }
+        
+        .sidebar-footer .auth-btn {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+        
+        .sidebar-footer .auth-btn:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        /* المحتوى الرئيسي */
+        .main-content {
+            flex: 1;
+            padding: 1rem;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        /* شريط أعلى الصفحة */
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem 1rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            margin-bottom: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .top-bar .menu-toggle {
+            background: none;
+            border: none;
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+        
+        .top-bar .menu-toggle:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        
+        .top-bar .logo-mobile {
+            font-weight: bold;
+            color: var(--primary-color);
+            display: block;
+        }
+        
+        .top-bar .user-actions {
+            display: flex;
+            align-items: center;
+        }
+        
+        .top-bar .user-actions .action-btn {
+            position: relative;
+            margin-left: 0.5rem;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+        
+        .top-bar .user-actions .action-btn:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        
+        /* أقسام الموقع */
+        .section {
+            padding: 2rem 0;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            text-align: center;
+            padding-bottom: 1rem;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(to right, var(--accent-color), var(--secondary-color));
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+        
+        .section-title.with-icon i {
+            margin-left: 10px;
+            color: var(--accent-color);
+        }
+        
+        /* قسم البطل */
+        .hero-section {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            background: linear-gradient(var(--secondary-color),var(--primary-color)),url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero-content h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero-content p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+        }
+        
+        /* اختيار الصلاة */
+        .prayer-selection {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .prayer-options {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .prayer-option {
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            border: 2px solid var(--accent-color);
+            background-color: white;
+            color: var(--accent-color);
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .prayer-option:hover {
+            background-color: #15989691;
+            color:white
+        }
+        
+        .prayer-option.active {
+            background-color: var(--accent-color);
+            color: white;
+        }
+        
+        .prayer-info {
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border-right: 3px solid var(--accent-color);
+            display: none;
+        }
+        
+        /* بطاقات الأذكار */
+        .azkar-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .zekr-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border-bottom: 3px solid var(--accent-color);
+            position: relative;
+        }
+        
+        .zekr-card.completed {
+            border-bottom: 3px solid var(--success-color);
+        }
+        
+        .zekr-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .zekr-header {
+            padding: 1.5rem;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+        
+        .zekr-number {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: rgba(255, 255, 255, 0.2);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+        
+        .zekr-checkmark {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: var(--success-color);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        
+        .zekr-card.completed .zekr-checkmark {
+            display: flex;
+        }
+        
+        .zekr-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .zekr-subtitle {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .zekr-body {
+            padding: 1.5rem;
+            min-height: 180px;
+        }
+        
+        .zekr-text {
+            color: #555;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.2rem;
+            text-align: justify;
+            font-weight: 500;
+        }
+        
+        .zekr-benefit {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 1rem;
+            font-style: italic;
+            border-right: 2px solid var(--accent-color);
+            padding-right: 0.8rem;
+        }
+        
+        .zekr-counter-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #f8f9fa;
+            padding: 0.8rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+        
+        .zekr-counter-info {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .zekr-counter-label {
+            font-size: 0.8rem;
+            color: var(--text-color);
+        }
+        
+        .zekr-counter-target {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .zekr-counter-controls {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        /* العداد التفاعلي */
+        .counter-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            margin-top: 0.5rem;
+        }
+        
+        .counter-btn {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1.2rem;
+        }
+        
+        .counter-btn:hover {
+            background-color: var(--secondary-color);
+            transform: scale(1.1);
+        }
+        
+        .counter-display {
+            background-color: white;
+            border: 2px solid var(--accent-color);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .counter-display.completed {
+            background-color: var(--success-color);
+            color: white;
+            border-color: var(--success-color);
+        }
+        
+        /* أزرار الموقع */
+        .btn {
+            display: inline-block;
+            background: linear-gradient(to right, var(--accent-color), var(--secondary-color));
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            font-size: 0.9rem;
+            box-shadow: 0 3px 8px rgba(99, 172, 229, 0.3);
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(99, 172, 229, 0.4);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            box-shadow: none;
+        }
+        
+        .btn-outline:hover {
+            background: linear-gradient(to right, var(--accent-color), var(--secondary-color));
+            color: white;
+        }
+        
+        .btn-success {
+            background: linear-gradient(to right, var(--success-color), #20c997);
+            box-shadow: 0 3px 8px rgba(40, 167, 69, 0.3);
+        }
+        
+        .btn-success:hover {
+            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4);
+        }
+        
+        .btn-block {
+            display: block;
+            width: 100%;
+        }
+        
+        /* قسم التقدم */
+        .progress-section {
+            background: linear-gradient(var(--secondary-color),var(--primary-color)), url('https://www.transparenttextures.com/patterns/arabesque.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 2.5rem 0;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        
+        .progress-section .section-title {
+            color: white;
+        }
+        
+        .progress-section .section-title:after {
+            background: linear-gradient(to right, var(--light-color), var(--accent-color));
+        }
+        
+        .progress-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .progress-bar {
+            background-color: rgba(255, 255, 255, 0.2);
+            height: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(to right, var(--accent-color), var(--success-color));
+            width: 0%;
+            transition: width 0.5s ease;
+            border-radius: 10px;
+        }
+        
+        .progress-text {
+            display: flex;
+            justify-content: space-evenly;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .achievement-badge {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .achievement-badge i {
+            font-size: 2rem;
+            color: gold;
+        }
+        
+        /* قسم الميزات */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to right, var(--accent-color), var(--secondary-color));
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+        
+        .feature-card h3 {
+            margin-bottom: 0.8rem;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+        
+        .feature-card p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+        
+        /* التذييل */
+        footer {
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 0 1rem;
+            margin-top: 2rem;
+            position: relative;
+        }
+        
+        footer:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 10px;
+            background: linear-gradient(to right, var(--accent-color), var(--secondary-color));
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-column h3 {
+            color: white;
+            margin-bottom: 1.2rem;
+            font-size: 1.2rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 40px;
+            height: 2px;
+            background: linear-gradient(to right, var(--accent-color), white);
+        }
+        
+        .footer-column p {
+            margin-bottom: 1rem;
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 0.6rem;
+        }
+        
+        .footer-column ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: all 0.3s;
+            display: block;
+            padding: 0.2rem 0;
+            font-size: 0.9rem;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--accent-color);
+            transform: translateX(-3px);
+        }
+        
+        .footer-column ul li a i {
+            margin-left: 6px;
+            color: var(--accent-color);
+            font-size: 0.8rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s;
+            font-size: 1rem;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        /* تأثيرات إضافية */
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .pulse {
+            animation: pulse 3s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+        
+        .confetti {
+            position: fixed;
+            width: 15px;
+            height: 15px;
+            background-color: var(--accent-color);
+            opacity: 0;
+            z-index: 1000;
+            pointer-events: none;
+        }
+        
+        /* تصميم متجاوب */
+        @media (max-width: 768px) {
+            .top-bar .logo-mobile {
+                display: block;
+            }
+            
+            .hero-section {
+                height: 300px;
+            }
+            
+            .hero-content h1 {
+                font-size: 1.7rem;
+            }
+            
+            .hero-content p {
+                font-size: 1rem;
+            }
+            
+            .azkar-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            }
+            
+            .prayer-options {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .prayer-option {
+                width: 80%;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-section {
+                height: 280px;
+            }
+            
+            .hero-content h1 {
+                font-size: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 1.3rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .azkar-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    
+
+</style>
+
+    <link rel="manifest" href="./manifest.json">
+</head>
+<body>
+    <div class="app-wrapper">
+        <!-- الشريط الجانبي - دائماً مخفي ويظهر كنافذة -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <span>طريق الجنة</span>
+                </div>
+            </div>
+            <nav class="sidebar-menu">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i>الرئيسية</a></li>
+                    <li><a href="index.html#learn"><i class="fas fa-graduation-cap"></i> تعلم الدين</a></li>
+                    <li><a href="الاذكار.html"><i class="fas fa-pray"></i> أذكار وأدعية</a></li>
+                    <li><a href="قراءة القرآن.html"><i class="fas fa-book-quran"></i> القرآن الكريم</a></li>
+                    <li><a href="اختبارات.html"><i class="fas fa-question-circle"></i> اختبارات تفاعلية</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <!-- المحتوى الرئيسي -->
+        <main class="main-content">
+            <!-- شريط أعلى الصفحة -->
+            <div class="top-bar">
+                <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                <div class="logo-mobile">طريق الجنة</div>
+            </div>
+            
+            <!-- قسم البطل -->
+            <section class="hero-section">
+                <div class="hero-content">
+                    <h1>أذكار ما بعد الصلاة التفاعلية</h1>
+                    <p>اختَر نوع الصلاة وابدأ بتلاوة أذكار ما بعد الصلاة مع عداد تفاعلي يساعدك على إكمالها</p>
+                    <div class="hero-buttons">
+                        <a href="#prayer-selection" class="btn pulse">اختَر الصلاة</a>
+                        <a href="#progress" class="btn btn-outline">تتبع تقدمك</a>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- اختيار نوع الصلاة -->
+            <section class="prayer-selection" id="prayer-selection">
+                <h3 class="section-title" style="font-size: 1.3rem; margin-bottom: 0.5rem;">ما هي الصلاة التي صليتها؟</h3>
+                <p style="margin-bottom: 1rem;">(هذا يؤثر على عدد مرات تلاوة المعوذات)</p>
+                
+                <div class="prayer-options">
+                    <div class="prayer-option" data-prayer="fajr" data-target="3">
+                        <i class="fas fa-moon"></i> صلاة الفجر
+                    </div>
+                    <div class="prayer-option" data-prayer="maghrib" data-target="3">
+                        <i class="fas fa-sun"></i> صلاة المغرب
+                    </div>
+                    <div class="prayer-option" data-prayer="other" data-target="1">
+                        <i class="fas fa-clock"></i> صلاة أخرى
+                    </div>
+                </div>
+                
+                <div class="prayer-info" id="prayerInfo">
+                    <!-- سيتم ملؤه ديناميكياً -->
+                </div>
+            </section>
+            
+            <!-- قسم التقدم -->
+            <section class="progress-section" id="progress">
+                <h2 class="section-title with-icon"><i class="fas fa-chart-line"></i> تقدمك</h2>
+                <div class="progress-container">
+                    <div class="progress-text">
+                        <span id="completedCount">0</span> من <span id="totalCount">6</span> ذكر مكتمل
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+                    </div>
+                    <div class="achievement-badge" id="achievementBadge" style="display: none;">
+                        <i class="fas fa-trophy"></i>
+                        <div>
+                            <div style="font-weight: bold;">مبارك! لقد أكملت كل الأذكار</div>
+                            <div style="font-size: 0.9rem; opacity: 0.9;">قال رسول الله ﷺ: "من سبح الله دبر كل صلاة ثلاثاً وثلاثين، وحمد الله ثلاثاً وثلاثين، وكبر الله ثلاثاً وثلاثين، فتلك تسعة وتسعون، وقال: لا إله إلا الله وحده لا شريك له، له الملك وله الحمد، وهو على كل شيء قدير، غفرت خطاياه وإن كانت مثل زبد البحر"</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- قسم الأذكار -->
+            <section class="section" id="azkar">
+                <h2 class="section-title with-icon"><i class="fas fa-praying-hands"></i> أذكار ما بعد الصلاة</h2>
+                <p style="text-align: center; margin-bottom: 2rem; color: var(--text-color); max-width: 800px; margin-left: auto; margin-right: auto;">استخدم العداد بجانب كل ذكر لتتبع عدد مرات التكرار، وسيتم وضع علامة ✓ عند إكمال العدد المطلوب</p>
+                
+                <div class="azkar-grid" id="azkarGrid">
+                    <!-- الذكر 1 -->
+                    <div class="zekr-card" id="zekr1">
+                        <div class="zekr-header">
+                            <div class="zekr-number">1</div>
+                            <div class="zekr-checkmark">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="zekr-title">الاستغفار</div>
+                            <div class="zekr-subtitle">ثلاث مرات</div>
+                        </div>
+                        <div class="zekr-body">
+                            <p class="zekr-text">أَسْتَغْفِرُ اللَّهَ<br>(ثلاث مرات)</p>
+                            <p class="zekr-benefit">من استغفر الله غفر الله له</p>
+                            <div class="zekr-counter-container">
+                                <div class="zekr-counter-info">
+                                    <div class="zekr-counter-label">العدد المطلوب</div>
+                                    <div class="zekr-counter-target">3 مرات</div>
+                                </div>
+                                <div class="counter-container">
+                                    <button class="counter-btn minus-btn" data-zekr="1">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                                    <div class="counter-display" id="counter1">0</div>
+                                    <button class="counter-btn plus-btn" data-zekr="1">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- الذكر 2 -->
+                    <div class="zekr-card" id="zekr2">
+                        <div class="zekr-header">
+                            <div class="zekr-number">2</div>
+                            <div class="zekr-checkmark">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="zekr-title">دعاء السلام</div>
+                            <div class="zekr-subtitle">مرة واحدة</div>
+                        </div>
+                        <div class="zekr-body">
+                            <p class="zekr-text">اللَّهُمَّ أَنْتَ السَّلَامُ،<br>وَمِنْكَ السَّلَامُ،<br>تَبَارَكْتَ يَا ذَا الْجَلَالِ وَالْإِكْرَامِ.</p>
+                            <div class="zekr-counter-container">
+                                <div class="zekr-counter-info">
+                                    <div class="zekr-counter-label">العدد المطلوب</div>
+                                    <div class="zekr-counter-target">مرة واحدة</div>
+                                </div>
+                                <div class="counter-container">
+                                    <button class="counter-btn minus-btn" data-zekr="2">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                                    <div class="counter-display" id="counter2">0</div>
+                                    <button class="counter-btn plus-btn" data-zekr="2">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- الذكر 3 -->
+                    <div class="zekr-card" id="zekr3">
+                        <div class="zekr-header">
+                            <div class="zekr-number">3</div>
+                            <div class="zekr-checkmark">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="zekr-title">التوحيد والدعاء</div>
+                            <div class="zekr-subtitle">مرة واحدة</div>
+                        </div>
+                        <div class="zekr-body">
+                            <p class="zekr-text">لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ،<br>لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ،<br>وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ.<br><br>اللَّهُمَّ لَا مَانِعَ لِمَا أَعْطَيْتَ،<br>وَلَا مُعْطِيَ لِمَا مَنَعْتَ،<br>وَلَا يَنْفَعُ ذَا الْجَدِّ مِنْكَ الْجَدُّ.</p>
+                            <div class="zekr-counter-container">
+                                <div class="zekr-counter-info">
+                                    <div class="zekr-counter-label">العدد المطلوب</div>
+                                    <div class="zekr-counter-target">مرة واحدة</div>
+                                </div>
+                                <div class="counter-container">
+                                    <button class="counter-btn minus-btn" data-zekr="3">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                                    <div class="counter-display" id="counter3">0</div>
+                                    <button class="counter-btn plus-btn" data-zekr="3">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- الذكر 4 -->
+                    <div class="zekr-card" id="zekr4">
+                        <div class="zekr-header">
+                            <div class="zekr-number">4</div>
+                            <div class="zekr-checkmark">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="zekr-title">التسبيح والتحميد والتكبير</div>
+                            <div class="zekr-subtitle">33 + 33 + 33 + 1</div>
+                        </div>
+                        <div class="zekr-body">
+                            <p class="zekr-text">سُبْحَانَ اللَّهِ (33 مرة)<br>الْحَمْدُ لِلَّهِ (33 مرة)<br>اللَّهُ أَكْبَرُ (33 مرة)<br><br>ثم يقول تمام المائة:<br>لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ،<br>لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ،<br>وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ.</p>
+                            <div class="zekr-counter-container">
+                                <div class="zekr-counter-info">
+                                    <div class="zekr-counter-label">العدد المطلوب</div>
+                                    <div class="zekr-counter-target">100 مرة</div>
+                                </div>
+                                <div class="counter-container">
+                                    <button class="counter-btn minus-btn" data-zekr="4">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                                    <div class="counter-display" id="counter4">0</div>
+                                    <button class="counter-btn plus-btn" data-zekr="4">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- الذكر 5 -->
+                    <div class="zekr-card" id="zekr5">
+                        <div class="zekr-header">
+                            <div class="zekr-number">5</div>
+                            <div class="zekr-checkmark">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="zekr-title">آية الكرسي</div>
+                            <div class="zekr-subtitle">مرة واحدة</div>
+                        </div>
+                        <div class="zekr-body">
+                            <p class="zekr-text">﴿اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ وَلَا يَئُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ﴾</p>
+                            <p class="zekr-benefit">من قرأها دبر كل صلاة لم يمنعه من دخول الجنة إلا الموت</p>
+                            <div class="zekr-counter-container">
+                                <div class="zekr-counter-info">
+                                    <div class="zekr-counter-label">العدد المطلوب</div>
+                                    <div class="zekr-counter-target">مرة واحدة</div>
+                                </div>
+                                <div class="counter-container">
+                                    <button class="counter-btn minus-btn" data-zekr="5">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                                    <div class="counter-display" id="counter5">0</div>
+                                    <button class="counter-btn plus-btn" data-zekr="5">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- الذكر 6 -->
+                    <div class="zekr-card" id="zekr6">
+                        <div class="zekr-header">
+                            <div class="zekr-number">6</div>
+                            <div class="zekr-checkmark">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="zekr-title">المعوذات</div>
+                            <div class="zekr-subtitle" id="zekr6Subtitle">مرة واحدة</div>
+                        </div>
+                        <div class="zekr-body">
+                            <p class="zekr-text">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ<br>﴿قُلْ هُوَ اللَّهُ أَحَدٌ﴾<br>﴿قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ﴾<br>﴿قُلْ أَعُوذُ بِرَبِّ النَّاسِ﴾</p>
+                            <div class="zekr-counter-container">
+                                <div class="zekr-counter-info">
+                                    <div class="zekr-counter-label">العدد المطلوب</div>
+                                    <div class="zekr-counter-target" id="zekr6Target">مرة واحدة</div>
+                                </div>
+                                <div class="counter-container">
+                                    <button class="counter-btn minus-btn" data-zekr="6">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                                    <div class="counter-display" id="counter6">0</div>
+                                    <button class="counter-btn plus-btn" data-zekr="6">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 2rem;">
+                    <button class="btn btn-success" id="resetAllBtn">
+                        <i class="fas fa-redo"></i> إعادة تعيين جميع العدادات
+                    </button>
+                </div>
+            </section>
+            
+            <!-- قسم الميزات -->
+            <section class="section">
+                <h2 class="section-title with-icon"><i class="fas fa-star"></i> فضل أذكار ما بعد الصلاة</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>حفظ من الله</h3>
+                        <p>أذكار ما بعد الصلاة تحفظ المسلم وتكون له نوراً وحرزاً من الشيطان</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3>مكفرات الذنوب</h3>
+                        <p>التسبيح والتحميد والتكبير بعد الصلاة تغفر الذنوب وإن كانت مثل زبد البحر</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-door-open"></i>
+                        </div>
+                        <h3>سبب لدخول الجنة</h3>
+                        <p>قراءة آية الكرسي بعد كل صلاة لا يمنع قارئها من دخول الجنة إلا الموت</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- التذييل -->
+            <!-- Footer المعتاد -->
+            <!-- بداية الفوتور - Footer (من صفحة أركان الإسلام) -->
+            <footer>
+                <div class="container">
+                    <div class="footer-content">
+                        <div class="footer-column">
+                            <h3>عن طريق الجنة</h3>
+                            <p>منصة إسلامية شاملة تهدف إلى تقديم محتوى تعليمي متميز في الدين الإسلامي بطرق تفاعلية
+                                حديثة.</p>
+                        </div>
+
+                        <div class="footer-column">
+                            <h3>روابط</h3>
+                            <ul>
+                                <li><a href="index.html"><i class="fas fa-home"></i>الرئيسية</a></li>
+                                <li><a href="index.html#learn"><i class="fas fa-graduation-cap"></i> تعلم الدين</a></li>
+                                <li><a href="الاذكار.html"><i class="fas fa-pray"></i> أذكار وأدعية</a></li>
+                                <li><a href="قراءة القرآن.html"><i class="fas fa-book-quran"></i> القرآن الكريم</a></li>
+                                <li><a href="اختبارات.html"><i class="fas fa-question-circle"></i> اختبارات تفاعلية</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="copyright">
+                        © <script>document.write(new Date().getFullYear())</script> طريق الجنة - جميع الحقوق محفوظة
+                    </div>
+                </div>
+            </footer>
+            <!-- نهاية الفوتور -->
+
+        </main>
+    </div>
+
+    <script>
+        // بيانات الأذكار
+        let azkarData = [
+            { id: 1, target: 3, current: 0, completed: false },
+            { id: 2, target: 1, current: 0, completed: false },
+            { id: 3, target: 1, current: 0, completed: false },
+            { id: 4, target: 100, current: 0, completed: false },
+            { id: 5, target: 1, current: 0, completed: false },
+            { id: 6, target: 1, current: 0, completed: false } // سيتم تحديث الهدف بناءً على نوع الصلاة
+        ];
+        
+        // حالة الصلاة المختارة
+        let selectedPrayer = null;
+        let muawwizatTarget = 1; // القيمة الافتراضية للمعوذات
+        
+        // عناصر DOM
+        const sidebar = document.getElementById('sidebar');
+        const menuToggle = document.getElementById('menuToggle');
+        const resetAllBtn = document.getElementById('resetAllBtn');
+        const completedCount = document.getElementById('completedCount');
+        const progressFill = document.getElementById('progressFill');
+        const achievementBadge = document.getElementById('achievementBadge');
+        const prayerOptions = document.querySelectorAll('.prayer-option');
+        const prayerInfo = document.getElementById('prayerInfo');
+        const zekr6Subtitle = document.getElementById('zekr6Subtitle');
+        const zekr6Target = document.getElementById('zekr6Target');
+        // عرض/إخفاء الشريط الجانبي
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+        
+        // إغلاق الشريط الجانبي عند النقر خارجها
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !menuToggle.contains(e.target)) {
+                sidebar.classList.remove('active');
+            }
+        });
+        
+        // اختيار نوع الصلاة
+        prayerOptions.forEach(option => {
+            option.addEventListener('click', function() {
+                // إزالة النشط من جميع الخيارات
+                prayerOptions.forEach(opt => opt.classList.remove('active'));
+                
+                // إضافة النشط للخيار المختار
+                this.classList.add('active');
+                
+                // حفظ الصلاة المختارة
+                selectedPrayer = this.dataset.prayer;
+                muawwizatTarget = parseInt(this.dataset.target);
+                
+                // تحديث هدف الذكر السادس (المعوذات)
+                azkarData[5].target = muawwizatTarget;
+                
+                // تحديث العرض
+                updateZekrTargetDisplay();
+                updateZekrState(6);
+                updateProgress();
+                
+                // عرض معلومات الصلاة
+                showPrayerInfo();
+            });
+        });
+        
+        // تحديث عرض هدف الذكر السادس
+        function updateZekrTargetDisplay() {
+            if (muawwizatTarget === 3) {
+                zekr6Subtitle.textContent = "ثلاث مرات";
+                zekr6Target.textContent = "3 مرات";
+            } else {
+                zekr6Subtitle.textContent = "مرة واحدة";
+                zekr6Target.textContent = "مرة واحدة";
+            }
+        }
+        
+        // عرض معلومات الصلاة المختارة
+        function showPrayerInfo() {
+            let infoText = "";
+            let icon = "";
+            
+            switch(selectedPrayer) {
+                case "fajr":
+                    infoText = "لقد اخترت صلاة الفجر. سيكون عدد مرات تلاوة المعوذات ثلاث مرات كما ورد في السنة.";
+                    icon = "fas fa-sun";
+                    break;
+                case "maghrib":
+                    infoText = "لقد اخترت صلاة المغرب. سيكون عدد مرات تلاوة المعوذات ثلاث مرات كما ورد في السنة.";
+                    icon = "fas fa-moon";
+                    break;
+                case "other":
+                    infoText = "لقد اخترت صلاة أخرى. سيكون عدد مرات تلاوة المعوذات مرة واحدة.";
+                    icon = "fas fa-clock";
+                    break;
+            }
+            
+            prayerInfo.innerHTML = `
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <i class="${icon}" style="font-size: 1.5rem; color: var(--accent-color);"></i>
+                    <div>
+                        <div style="font-weight: bold; margin-bottom: 0.3rem;">معلومة:</div>
+                        <div>${infoText}</div>
+                    </div>
+                </div>
+            `;
+            prayerInfo.style.display = "block";
+        }
+        
+        // تحديث التقدم
+        function updateProgress() {
+            let completed = 0;
+            let total = azkarData.length;
+            
+            azkarData.forEach(azkar => {
+                if (azkar.completed) completed++;
+            });
+            
+            completedCount.textContent = completed;
+            const percentage = (completed / total) * 100;
+            progressFill.style.width = `${percentage}%`;
+            
+            // إظهار أو إخفاء شارة الإنجاز
+            if (completed === total) {
+                achievementBadge.style.display = 'flex';
+                createConfetti();
+            } else {
+                achievementBadge.style.display = 'none';
+            }
+        }
+        
+        // تحديث حالة الذكر
+        function updateZekrState(id) {
+            const azkar = azkarData.find(a => a.id === id);
+            const counterElement = document.getElementById(`counter${id}`);
+            const zekrCard = document.getElementById(`zekr${id}`);
+            const counterDisplay = document.getElementById(`counter${id}`);
+            
+            // تحديث العدد على الشاشة
+            counterElement.textContent = azkar.current;
+            
+            // التحقق إذا تم إكمال الذكر
+            if (azkar.current >= azkar.target) {
+                azkar.completed = true;
+                zekrCard.classList.add('completed');
+                counterDisplay.classList.add('completed');
+                playCompletionSound();
+                
+                // تأثير بصري
+                zekrCard.style.transform = 'scale(1.02)';
+                setTimeout(() => {
+                    zekrCard.style.transform = 'scale(1)';
+                }, 300);
+            } else {
+                azkar.completed = false;
+                zekrCard.classList.remove('completed');
+                counterDisplay.classList.remove('completed');
+            }
+            
+            // حفظ الحالة في التخزين المحلي
+            
+            // تحديث التقدم العام
+            updateProgress();
+        }
+        
+        // تشغيل صوت الإنجاز
+        function playCompletionSound() {
+            // يمكن إضافة صوت هنا
+        }
+        
+        // إنشاء تأثير الكونفيتي
+        function createConfetti() {
+            const colors = ['#63ace5', '#4b86b4', '#2a4d69', '#28a745', '#b8860b'];
+            for (let i = 0; i < 50; i++) {
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+                    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                    confetti.style.left = `${Math.random() * 100}vw`;
+                    confetti.style.top = '-10px';
+                    confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+                    
+                    document.body.appendChild(confetti);
+                    
+                    // تحريك الكونفيتي
+                    const animation = confetti.animate([
+                        { transform: 'translateY(0) rotate(0deg)', opacity: 1 },
+                        { transform: `translateY(${window.innerHeight}px) rotate(${Math.random() * 360}deg)`, opacity: 0 }
+                    ], {
+                        duration: 1000 + Math.random() * 2000,
+                        easing: 'cubic-bezier(0.215, 0.610, 0.355, 1)'
+                    });
+                    
+                    // إزالة الكونفيتي بعد الانتهاء
+                    animation.onfinish = () => {
+                        confetti.remove();
+                    };
+                }, i * 50);
+            }
+        }
+
+        // إضافة الأحداث للأزرار
+        document.querySelectorAll('.plus-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const zekrId = parseInt(this.dataset.zekr);
+                const azkar = azkarData.find(a => a.id === zekrId);
+                
+                if (azkar.current < azkar.target) {
+                    azkar.current++;
+                    updateZekrState(zekrId);
+                    
+                    // تأثير على الزر
+                    this.style.transform = 'scale(0.9)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 150);
+                }
+            });
+        });
+        
+        document.querySelectorAll('.minus-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const zekrId = parseInt(this.dataset.zekr);
+                const azkar = azkarData.find(a => a.id === zekrId);
+                
+                if (azkar.current > 0) {
+                    azkar.current--;
+                    updateZekrState(zekrId);
+                    
+                    // تأثير على الزر
+                    this.style.transform = 'scale(0.9)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 150);
+                }
+            });
+        });
+        
+        // إعادة تعيين جميع العدادات
+        resetAllBtn.addEventListener('click', () => {
+            if (confirm('هل تريد إعادة تعيين جميع العدادات؟')) {
+                azkarData.forEach(azkar => {
+                    azkar.current = 0;
+                    azkar.completed = false;
+                    updateZekrState(azkar.id);
+                });
+                
+                // تأثير على الزر
+                resetAllBtn.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    resetAllBtn.style.transform = 'scale(1)';
+                }, 200);
+            }
+        });
+        
+        // حفظ الحالة في التخزين المحلي
+        function saveToLocalStorage() {
+            const saveData = {
+                azkarData: azkarData,
+                selectedPrayer: selectedPrayer,
+                muawwizatTarget: muawwizatTarget
+            };
+            localStorage.setItem('afterPrayerAzkar', JSON.stringify(saveData));
+        }
+        
+        // تحميل الحالة من التخزين المحلي
+        function loadFromLocalStorage() {
+            const saved = localStorage.getItem('afterPrayerAzkar');
+            if (saved) {
+                const savedData = JSON.parse(saved);
+                azkarData = savedData.azkarData || azkarData;
+                selectedPrayer = savedData.selectedPrayer;
+                muawwizatTarget = savedData.muawwizatTarget || 1;
+                
+                // تحديث الواجهة بناءً على البيانات المحفوظة
+                if (selectedPrayer) {
+                    // تفعيل خيار الصلاة المحفوظ
+                    prayerOptions.forEach(option => {
+                        if (option.dataset.prayer === selectedPrayer) {
+                            option.classList.add('active');
+                            showPrayerInfo();
+                        }
+                    });
+                    
+                    // تحديث عرض هدف الذكر السادس
+                    updateZekrTargetDisplay();
+                }
+                
+                // تحديث جميع الأذكار
+                azkarData.forEach(azkar => {
+                    updateZekrState(azkar.id);
+                });
+            }
+        }
+        
+        // تهيئة التطبيق عند التحميل
+        document.addEventListener('DOMContentLoaded', () => {
+            loadFromLocalStorage();
+            updateProgress();
+            
+            // تأثيرات ظهور البطاقات
+            const cards = document.querySelectorAll('.zekr-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+        
+        // تأثيرات عند التمرير
+        window.addEventListener('scroll', () => {
+            const cards = document.querySelectorAll('.zekr-card');
+            cards.forEach(card => {
+                const cardTop = card.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (cardTop < windowHeight - 100) {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }
+            });
+        });
+    </script>
+
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('./sw.js', { scope: './' })
+                .then(registration => {
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                })
+                .catch(err => {
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+        });
+    }
+</script>
+</body>
+</html>
